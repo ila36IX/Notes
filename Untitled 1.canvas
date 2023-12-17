@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"fa25024f274d140b","x":-840,"y":-340,"width":250,"height":210,"type":"text","text":"# Python"},
-		{"id":"bf02f6edd5c0de28","x":-100,"y":-740,"width":400,"height":400,"type":"file","file":"Python/The datetime module.md"}
-	],
-	"edges":[
-		{"id":"d807ac11214ee6f5","fromNode":"bf02f6edd5c0de28","fromSide":"bottom","toNode":"fa25024f274d140b","toSide":"right"}
-	]
-}

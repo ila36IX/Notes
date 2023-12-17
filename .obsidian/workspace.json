@@ -4,27 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "e6d80028ef44c9a9",
+        "id": "96bf7469efb90614",
         "type": "tabs",
         "children": [
           {
-            "id": "483e2bf18af34cd8",
+            "id": "699dbecdc19eb033",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/Networking/Networking/The OSI model (changed).md",
+                "file": "MySQL/MySQL Permissions.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "4b3d3be547177c2b",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           }
         ]
@@ -93,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React/Networking/Networking/The OSI model (changed).md",
+                "file": "MySQL/MySQL Permissions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React/Networking/Networking/The OSI model (changed).md",
+                "file": "MySQL/MySQL Permissions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React/Networking/Networking/The OSI model (changed).md"
+                "file": "MySQL/MySQL Permissions.md"
               }
             }
           }
@@ -154,15 +146,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "483e2bf18af34cd8",
+  "active": "699dbecdc19eb033",
   "lastOpenFiles": [
+    "MySQL/DATABASE.md",
+    "MySQL/MySQL constraints.md",
+    "MySQL/MySQL Functions.md",
+    "MySQL/MySQL Permissions.md",
+    "MySQL/Cheat sheet.md",
+    "README.md",
+    "MySQL",
+    "React/Networking/Networking/The OSI model (changed).md",
+    "Untitled.canvas",
     "Python/The datetime module.md",
     "Python/Python ingeritance.md",
     "Python/OOP !again.md",
     "Python/Untitled.canvas",
     "Untitled 2.canvas",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
-    "README.md"
+    "Untitled 1.canvas"
   ]
 }
