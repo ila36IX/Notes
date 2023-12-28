@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "96bf7469efb90614",
+        "id": "dd2afebfaa394d50",
         "type": "tabs",
         "children": [
           {
-            "id": "699dbecdc19eb033",
+            "id": "5daff140f087c2ec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MySQL/MySQL Permissions.md",
+                "file": "MySQL/MySQL constraints.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "810e4847c7dbbae3",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MySQL/MySQL Permissions.md",
+                "file": "MySQL/MySQL constraints.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MySQL/MySQL Permissions.md",
+                "file": "MySQL/MySQL constraints.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MySQL/MySQL Permissions.md"
+                "file": "MySQL/MySQL constraints.md"
               }
             }
           }
@@ -146,20 +147,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "699dbecdc19eb033",
+  "active": "5daff140f087c2ec",
   "lastOpenFiles": [
-    "MySQL/DATABASE.md",
-    "MySQL/MySQL constraints.md",
-    "MySQL/MySQL Functions.md",
+    "MySQL/MySQL basics.md",
+    "MySQL/Database Structures.md",
+    "MySQL/MySQL UTF8 types.md",
+    "C lang/make.md",
+    "HTLM & CSS/CSS.md",
+    "C lang",
+    "HTLM & CSS/HTLM.md",
+    "HTLM & CSS/Web vs internet.md",
+    "Networking/URL to WebPage.md",
+    "HTLM & CSS/README.md",
+    "Networking/Network devops.md",
+    "Networking/The OSI model.md",
+    "HTLM & CSS",
+    "Python/OOP !again.md",
+    "MySQL/MySQL join.md",
     "MySQL/MySQL Permissions.md",
+    "MySQL/MySQL Functions.md",
+    "MySQL/MySQL constraints.md",
+    "MySQL/MySQL Style Quide.md",
+    "MySQL/Database.md",
+    "file",
     "MySQL/Cheat sheet.md",
-    "README.md",
     "MySQL",
-    "React/Networking/Networking/The OSI model (changed).md",
     "Untitled.canvas",
     "Python/The datetime module.md",
     "Python/Python ingeritance.md",
-    "Python/OOP !again.md",
     "Python/Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"

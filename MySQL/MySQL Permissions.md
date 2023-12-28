@@ -2,7 +2,7 @@
 ## Linux basics
 ### Linux existing users
 
-You can list all the users that are in you system by having a loop to this file `etc/passwd`.
+You can list all the users that are in you system by having a look to this file `etc/passwd`.
 
 ![](https://oracle-patches.com/images/2021/02/06/etc_passwd_file.png)
 

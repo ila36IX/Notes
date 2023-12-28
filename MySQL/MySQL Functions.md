@@ -33,4 +33,21 @@ SELECT MINUTE(CURTIME());
 SELECT SECOND(CURTIME());
 ```
 
+### The `NOW` function
+Give the current data & time, it has all the previous mentions properties like `YEAR`, `DAY`, `Hour`, `SECOND`...
 
+```mysql
+SELECT NOW();
+SELECT YEAR(NOW());
+SELECT MONTH(NOW());
+SELECT DAY(NOW());
+SELECT NOW();
+SELECT HOUR(NOW());
+SELECT MINUTE(NOW());
+SELECT SECOND(NOW());
+```
+### The `LENGTH` function
+
+```mysql
+SELECT d, LENGTH(d) FROM table_name;
+```
