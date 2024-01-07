@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e226d5d646f68cfc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Web infrastructure.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "810e4847c7dbbae3",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MySQL/MySQL constraints.md",
+                "file": "Networking/Web infrastructure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MySQL/MySQL constraints.md",
+                "file": "Networking/Web infrastructure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MySQL/MySQL constraints.md"
+                "file": "Networking/Web infrastructure.md"
               }
             }
           }
@@ -147,8 +159,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5daff140f087c2ec",
+  "active": "e226d5d646f68cfc",
   "lastOpenFiles": [
+    "Networking/Network devops.md",
+    "Networking/The OSI model.md",
+    "Networking/URL to WebPage.md",
+    "Networking/Web infrastructure.md",
+    "MySQL/MySQL constraints.md",
     "MySQL/MySQL basics.md",
     "MySQL/Database Structures.md",
     "MySQL/MySQL UTF8 types.md",
@@ -157,16 +174,12 @@
     "C lang",
     "HTLM & CSS/HTLM.md",
     "HTLM & CSS/Web vs internet.md",
-    "Networking/URL to WebPage.md",
     "HTLM & CSS/README.md",
-    "Networking/Network devops.md",
-    "Networking/The OSI model.md",
     "HTLM & CSS",
     "Python/OOP !again.md",
     "MySQL/MySQL join.md",
     "MySQL/MySQL Permissions.md",
     "MySQL/MySQL Functions.md",
-    "MySQL/MySQL constraints.md",
     "MySQL/MySQL Style Quide.md",
     "MySQL/Database.md",
     "file",
