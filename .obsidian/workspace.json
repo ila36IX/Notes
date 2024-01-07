@@ -4,22 +4,71 @@
     "type": "split",
     "children": [
       {
-        "id": "dd2afebfaa394d50",
+        "id": "cbaa14fd0acdb34a",
         "type": "tabs",
         "children": [
           {
-            "id": "5daff140f087c2ec",
+            "id": "f8604e15e4957f05",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MySQL/MySQL constraints.md",
+                "file": "Networking/DNS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c2eb6bc7afeba917",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/The OSI model.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3d168255571617fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Load balancer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2aaeeb38333efc60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Types of networks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "08f874254e8d3fb4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Protocols.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -69,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "810e4847c7dbbae3",
@@ -86,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MySQL/MySQL constraints.md",
+                "file": "Networking/Protocols.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MySQL/MySQL constraints.md",
+                "file": "Networking/Protocols.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MySQL/MySQL constraints.md"
+                "file": "Networking/Protocols.md"
               }
             }
           }
@@ -147,26 +195,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5daff140f087c2ec",
+  "active": "08f874254e8d3fb4",
   "lastOpenFiles": [
+    "Networking/Types of networks.md",
+    "Networking/Protocols.md",
+    "Load balancer.md",
+    "Networking/The OSI model.md",
+    "Networking/DNS.md",
+    "Networking/Internet.md",
+    "C lang/make.md",
+    "Networking/Network devops.md",
+    "Networking/URL to WebPage.md",
+    "MySQL/MySQL constraints.md",
+    "à.md",
     "MySQL/MySQL basics.md",
     "MySQL/Database Structures.md",
     "MySQL/MySQL UTF8 types.md",
-    "C lang/make.md",
     "HTLM & CSS/CSS.md",
     "C lang",
     "HTLM & CSS/HTLM.md",
     "HTLM & CSS/Web vs internet.md",
-    "Networking/URL to WebPage.md",
     "HTLM & CSS/README.md",
-    "Networking/Network devops.md",
-    "Networking/The OSI model.md",
     "HTLM & CSS",
     "Python/OOP !again.md",
     "MySQL/MySQL join.md",
     "MySQL/MySQL Permissions.md",
     "MySQL/MySQL Functions.md",
-    "MySQL/MySQL constraints.md",
     "MySQL/MySQL Style Quide.md",
     "MySQL/Database.md",
     "file",
@@ -174,7 +228,6 @@
     "MySQL",
     "Untitled.canvas",
     "Python/The datetime module.md",
-    "Python/Python ingeritance.md",
     "Python/Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"

@@ -3,13 +3,13 @@
 	[A]ll [P]eople [S]eems [T]o [N]eed [D]ata [P]rocessing.
 
 **OSI** (Open Systems Interconnection) model consists of seven layers, each serving a specific function in network communication.
-### Application
+### 1 - Application
 
 Where you interact with the program and the data. You use your computer and a program like a browser (using [HTTP](obsidian://open?vault=Notes&file=Networking%2FNetwork%20devops)) or an email client to write your message.
 
-## Transport
+## 2 - Transport
 
-The **Transport layer** takes your message and splits it into smaller pieces, called segments. It also adds some information to each segment, like a sequence number and a checksum, to make sure that your message can be reassembled and verified on the other end.
+The **Transport layer**  is what provides a reliable data connection between two devices it takes your message and splits it into smaller pieces, called segments. It also adds some information to each segment, like a sequence number and a checksum, It acknowledges the packets that it has received from the other device, and makes sure that the other device acknowledges the packets it receives.
 
 ### TCP/UDP
 #### TCP (Transmitting Control Protocol)
