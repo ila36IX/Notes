@@ -1,52 +1,39 @@
 {
   "main": {
-    "id": "e924f3bd0cbaeaf4",
+    "id": "af273a214749f9a5",
     "type": "split",
     "children": [
       {
-        "id": "dd2afebfaa394d50",
+        "id": "bb805fe613f83b9f",
         "type": "tabs",
         "children": [
           {
-            "id": "5daff140f087c2ec",
+            "id": "3319c6efd35d8950",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MySQL/MySQL constraints.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e226d5d646f68cfc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Web infrastructure.md",
+                "file": "Networking/URL to WebPage.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "e2e6bbf4edb23957",
+    "id": "fba3305edd295113",
     "type": "split",
     "children": [
       {
-        "id": "e693962d980af389",
+        "id": "40711f31745407da",
         "type": "tabs",
         "children": [
           {
-            "id": "39ffc5f9b3c0ea2d",
+            "id": "feb6c52f017ea36c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,7 +43,7 @@
             }
           },
           {
-            "id": "efd38383b2deae7e",
+            "id": "83d0a0926c63da6c",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -71,7 +58,7 @@
             }
           },
           {
-            "id": "aeb056b8e508102e",
+            "id": "4796ec772d858ec0",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -85,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "810e4847c7dbbae3",
+    "id": "88538b4fd299a547",
     "type": "split",
     "children": [
       {
-        "id": "d3660ba37040f3a3",
+        "id": "570a351524a4d23a",
         "type": "tabs",
         "children": [
           {
-            "id": "3ed62be7a3ec4713",
+            "id": "2713e0e542654910",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Networking/Web infrastructure.md",
+                "file": "Networking/URL to WebPage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,19 +97,19 @@
             }
           },
           {
-            "id": "ccec3b227af3722f",
+            "id": "1e57b84da66c01b7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Networking/Web infrastructure.md",
+                "file": "Networking/URL to WebPage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "61ef57eeb163a2af",
+            "id": "e54b5a26e4021911",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,12 +120,12 @@
             }
           },
           {
-            "id": "66d254356edfa403",
+            "id": "6d7c99b5c3340f78",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Networking/Web infrastructure.md"
+                "file": "Networking/URL to WebPage.md"
               }
             }
           }
@@ -159,37 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e226d5d646f68cfc",
+  "active": "3319c6efd35d8950",
   "lastOpenFiles": [
-    "Networking/Network devops.md",
     "Networking/The OSI model.md",
-    "Networking/URL to WebPage.md",
-    "Networking/Web infrastructure.md",
-    "MySQL/MySQL constraints.md",
-    "MySQL/MySQL basics.md",
-    "MySQL/Database Structures.md",
-    "MySQL/MySQL UTF8 types.md",
-    "C lang/make.md",
-    "HTLM & CSS/CSS.md",
-    "C lang",
-    "HTLM & CSS/HTLM.md",
-    "HTLM & CSS/Web vs internet.md",
-    "HTLM & CSS/README.md",
-    "HTLM & CSS",
-    "Python/OOP !again.md",
-    "MySQL/MySQL join.md",
-    "MySQL/MySQL Permissions.md",
-    "MySQL/MySQL Functions.md",
-    "MySQL/MySQL Style Quide.md",
-    "MySQL/Database.md",
-    "file",
-    "MySQL/Cheat sheet.md",
-    "MySQL",
-    "Untitled.canvas",
-    "Python/The datetime module.md",
-    "Python/Python ingeritance.md",
-    "Python/Untitled.canvas",
-    "Untitled 2.canvas",
-    "Untitled 1.canvas"
+    "Networking/Network devops.md",
+    "Networking/Internet.md",
+    "Networking/DNS.md"
   ]
 }
