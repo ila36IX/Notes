@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/URL to WebPage.md",
+                "file": "Networking/Types of networks.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Networking/URL to WebPage.md",
+                "file": "Networking/Types of networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Networking/URL to WebPage.md",
+                "file": "Networking/Types of networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Networking/URL to WebPage.md"
+                "file": "Networking/Types of networks.md"
               }
             }
           }
@@ -148,7 +148,17 @@
   },
   "active": "3319c6efd35d8950",
   "lastOpenFiles": [
+    "Networking/Protocols.md",
     "Networking/The OSI model.md",
+    "Networking/Web infrastructure.md",
+    "Networking/Types of networks.md",
+    "Python/Python ingeritance.md",
+    "Python/OOP !again.md",
+    "C lang/make.md",
+    "MySQL/MySQL constraints.md",
+    "MySQL/Database Structures.md",
+    "MySQL/Database.md",
+    "Networking/URL to WebPage.md",
     "Networking/Network devops.md",
     "Networking/Internet.md",
     "Networking/DNS.md"

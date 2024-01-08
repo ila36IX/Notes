@@ -1,6 +1,6 @@
 
 
-![](https://media.tenor.com/1SwdfIZZkx4AAAAd/wes-dst.gif)
+![](https://image.slidesharecdn.com/python-inheritance-221229153155-5a061320/75/pythoninheritancepptx-1-2048.jpg?cb=1672328400)
 
 # Attributes Function
 
