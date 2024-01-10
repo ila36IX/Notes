@@ -25,7 +25,7 @@ printf 'HTTP/1.1 302 Moved\r\nLocation: https://www.eff.org/' | nc -l 2345
 To connect to this port using the browser, you can use :
 
 `<your ip>:port`
-	
+
 ### Used network sockets:
 
 `lsof` is an abbreviation for "list open files," and the inclusion of the `-i` flag in the command signifies its focus on presenting information pertaining to network connections. 

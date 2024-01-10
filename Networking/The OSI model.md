@@ -7,7 +7,7 @@
 
 Where you interact with the program and the data. You use your computer and a program like a browser (using [HTTP](obsidian://open?vault=Notes&file=Networking%2FNetwork%20devops)) or an email client to write your message.
 
-## 2 - Transport
+## 4 - Transport
 
 The **Transport layer**  is what provides a reliable data connection between two devices it takes your message and splits it into smaller pieces, called segments. It also adds some information to each segment, like a sequence number and a checksum, It acknowledges the packets that it has received from the other device, and makes sure that the other device acknowledges the packets it receives.
 
@@ -93,11 +93,12 @@ IP addresses are essential for data routing and addressing in the network. There
 **localhost** is a *hostname* that refers to the current computer used to access it. The name localhost is reserved for *loopback* purposes. It is used to access the network services that are running on the host via the *loopback* network interface. Using the *loopback* interface bypasses any local network interface hardware.
 
 
-## Data link
+## 6-Data link
 
 Takes each packet and converts it into a stream of bits, which are the basic units of data in a network. This layer also adds some information to each packet, like a header and a trailer, to help the devices on the network communicate with each other.
+Look at [[The access layer]]. 
 
-## Physical
+## 7-Physical
 
 Finally, the **Link layer** sends the bits over the physical medium, which can be a cable, a wireless signal, or a fiber optic. The bits travel from one device to another.
 
