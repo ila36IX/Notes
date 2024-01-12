@@ -34,3 +34,4 @@ function ControlledForm() {
 ## STATE VS. PROPS
 
 ![](https://i.imgur.com/9n6iy37.png)
+

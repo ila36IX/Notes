@@ -54,9 +54,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0175ad7d329089cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Network devops.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -122,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React/Controlled elements.md",
+                "file": "Networking/Network devops.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React/Controlled elements.md",
+                "file": "Networking/Network devops.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React/Controlled elements.md"
+                "file": "Networking/Network devops.md"
               }
             }
           }
@@ -183,10 +195,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fa61e06a6b7e44e",
+  "active": "0175ad7d329089cc",
   "lastOpenFiles": [
-    "Networking/Network devops.md",
+    "JavaScript/Object.md",
     "React/Controlled elements.md",
+    "React/State management.md",
+    "JavaScript",
+    "Pasted image 20240112013248.png",
+    "Networking/Network devops.md",
     "Networking/Protocols.md",
     "Networking/The OSI model.md",
     "Networking/Types of networks.md",
