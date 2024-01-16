@@ -9,3 +9,8 @@ newObj = {...newObj, ["name"]: "hp"};
 newObj = {...newObj, "name": "hp"};
 ```
 
+Make a copy of an array:
+
+```js
+let newArray = oldArray.slice();
+```
