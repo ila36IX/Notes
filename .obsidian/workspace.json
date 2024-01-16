@@ -4,83 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "bb805fe613f83b9f",
+        "id": "75ce7e8822e33195",
         "type": "tabs",
         "children": [
           {
-            "id": "3319c6efd35d8950",
+            "id": "e3b1acd398bc6579",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/Types of networks.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9ce0c545c2421041",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/TCP&IP model/TCP-IP model.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ee81e2b2627e3d6d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Network devops.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1fa61e06a6b7e44e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React/Controlled elements.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0175ad7d329089cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React/State management.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6db025bd69265dad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Props.md",
+                "file": "Networking/TCP&IP model/IPv4 Protocol.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -146,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Props.md",
+                "file": "Networking/TCP&IP model/IPv4 Protocol.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Props.md",
+                "file": "Networking/TCP&IP model/IPv4 Protocol.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Props.md"
+                "file": "Networking/TCP&IP model/IPv4 Protocol.md"
               }
             }
           }
@@ -207,21 +146,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6db025bd69265dad",
+  "active": "e3b1acd398bc6579",
   "lastOpenFiles": [
+    "Networking/The OSI model.md",
+    "Networking/TCP&IP model/IPv4 Protocol.md",
+    "Networking/Protocols.md",
+    "Networking/TCP&IP model/TCP-IP model.md",
+    "Networking/TCP&IP model/The access layer.md",
+    "Networking/Web infrastructure.md",
+    "Networking/Types of networks.md",
+    "Networking/Network devops.md",
+    "React/Controlled elements.md",
     "React/State management.md",
     "Props.md",
-    "React/Controlled elements.md",
     "JavaScript/Object.md",
-    "Networking/Network devops.md",
     "JavaScript",
     "Pasted image 20240112013248.png",
-    "Networking/Protocols.md",
-    "Networking/The OSI model.md",
-    "Networking/Types of networks.md",
-    "Networking/Web infrastructure.md",
-    "Networking/TCP&IP model/The access layer.md",
-    "Networking/TCP&IP model/TCP-IP model.md",
     "Networking/Internet.md",
     "Networking/URL to WebPage.md",
     "Networking/TCP&IP model",

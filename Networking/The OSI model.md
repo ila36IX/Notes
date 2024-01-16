@@ -86,13 +86,6 @@ IP addresses are essential for data routing and addressing in the network. There
 |IPv4| 32-bit | 2^32 (4 billion)| 1.160.10.240 |
 |IPv6| 128-bit | 2^128 (infinite-Like number) | 3ffe:1900:4545:3:200:f8ff:fe21:67cf| 
 
-### Special IP: localhost
-
-![](https://fossbytes.com/wp-content/uploads/2016/10/localhost-127.0.0.1.jpg)
-
-**localhost** is a *hostname* that refers to the current computer used to access it. The name localhost is reserved for *loopback* purposes. It is used to access the network services that are running on the host via the *loopback* network interface. Using the *loopback* interface bypasses any local network interface hardware.
-
-
 ## 6-Data link
 
 Takes each packet and converts it into a stream of bits, which are the basic units of data in a network. This layer also adds some information to each packet, like a header and a trailer, to help the devices on the network communicate with each other.
