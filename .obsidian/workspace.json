@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "75ce7e8822e33195",
+        "id": "0077a91e82d8bbc2",
         "type": "tabs",
         "children": [
           {
-            "id": "e3b1acd398bc6579",
+            "id": "368f298646e0e74d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/TCP&IP model/IPv4 Protocol.md",
+                "file": "Networking/TCP&IP model/Network segmentation.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Networking/TCP&IP model/IPv4 Protocol.md",
+                "file": "Networking/TCP&IP model/Network segmentation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Networking/TCP&IP model/IPv4 Protocol.md",
+                "file": "Networking/TCP&IP model/Network segmentation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Networking/TCP&IP model/IPv4 Protocol.md"
+                "file": "Networking/TCP&IP model/Network segmentation.md"
               }
             }
           }
@@ -146,31 +146,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e3b1acd398bc6579",
+  "active": "368f298646e0e74d",
   "lastOpenFiles": [
-    "Networking/The OSI model.md",
     "Networking/TCP&IP model/IPv4 Protocol.md",
-    "Networking/Protocols.md",
+    "Untitled.canvas",
+    "Untitled.md",
+    "Untitled 1.md",
+    "MySQL/MySQL basics.md",
+    "C lang/make.md",
+    "C lang/Binary trees.md",
+    "Networking/TCP&IP model/Network segmentation.md",
     "Networking/TCP&IP model/TCP-IP model.md",
+    "React/Props.md",
+    "Networking/The OSI model.md",
     "Networking/TCP&IP model/The access layer.md",
-    "Networking/Web infrastructure.md",
-    "Networking/Types of networks.md",
-    "Networking/Network devops.md",
-    "React/Controlled elements.md",
+    "Networking/Protocols.md",
     "React/State management.md",
-    "Props.md",
+    "React/Controlled elements.md",
     "JavaScript/Object.md",
+    "Networking/Network devops.md",
     "JavaScript",
     "Pasted image 20240112013248.png",
+    "Networking/Types of networks.md",
+    "Networking/Web infrastructure.md",
     "Networking/Internet.md",
     "Networking/URL to WebPage.md",
     "Networking/TCP&IP model",
     "Python/Python ingeritance.md",
     "Python/OOP !again.md",
-    "C lang/make.md",
     "MySQL/MySQL constraints.md",
     "MySQL/Database Structures.md",
-    "MySQL/Database.md",
-    "Networking/DNS.md"
+    "MySQL/Database.md"
   ]
 }

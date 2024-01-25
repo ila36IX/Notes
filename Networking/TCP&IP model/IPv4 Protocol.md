@@ -10,7 +10,7 @@ This hierarchical addressing simplifies routing as routers only need to know how
 
 ## Unicast transmission
 
-Unicast transmission refers to one device sending a message to one other device in one-to-one communications.
+Unicast transmission refers to one device sending a message to one other device in *one-to-one* communications.
 A unicast packet has a destination IP address that is a unicast address which goes to a single recipient. A source IP address can only be a unicast address, because the packet can only originate from a single source. This is regardless of whether the destination IP address is a unicast, broadcast, or multicast.
 
 ## Broadcast
@@ -18,6 +18,8 @@ A unicast packet has a destination IP address that is a unicast address which go
 Broadcast transmission refers to a device sending a message to all the devices on a network in one-to-all communications.
 
 A broadcast packet has a destination IP address with all ones (1s) in the host portion, or 32 one (1) bits (255.255.255.255).
+
+Routers will not forward an IPv4 broadcast packet by default.
 
 ## Routing to the Internet
 
@@ -51,8 +53,6 @@ User to broadcast a packet to every host in the network except the source host.
 
 ![assignment of ip addresses](https://i.imgur.com/chwtz5F.png)
 
-1. **Public IPv4 Addresses:** Globally routed over the internet, public IPv4 addresses must be unique.
-2. **IANA Management:** The Internet Assigned Numbers Authority (IANA) manages and allocates IP address blocks.
-3. **Regional Internet Registries (RIRs):** There are five RIRs responsible for IP address allocation. 
-4. **RIR Allocation to ISPs:** RIRs allocate IP addresses to Internet Service Providers (ISPs).
-5. **ISP Distribution:** ISPs distribute IPv4 address blocks to organizations and smaller ISPs.
+1. Public IPv4 addresses are addresses which are globally routed over the internet. 
+- Public IPv4 addresses must be unique. 
+- Both IPv4 and IPv6 addresses are managed by the IANA. The IANA manages and allocates blocks of IP addresses to the RIRs. RIRs are responsible for allocating IP addresses to ISPs who provide IPv4 address blocks to organizations and smaller ISPs. Organizations can also get their addresses directly from an RIR.
