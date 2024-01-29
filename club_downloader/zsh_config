@@ -1,0 +1,17 @@
+# alieses
+alias petty="python3  /usr/lib/python3/dist-packages/pycodestyle.py"
+alias berners_lee="/home/alien/.my_scripts/./w3c_validator.py"
+alias py=python3
+alias lab="cd ~/filelab/files_lab"
+
+clone() {
+    if [ $# -ne 1 ]
+    then
+        echo "Usage: clone <repo_name>"
+    else
+        git clone "https://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@github.com/ila36IX/$1.git"
+    fi
+}
+
+# constants
+export token="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"
