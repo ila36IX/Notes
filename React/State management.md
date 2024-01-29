@@ -6,7 +6,7 @@
 
 ![](https://i.imgur.com/C6nZqnJ.png)
 
-## When and where to use state
+## When and where to use states
 
 ![](https://i.imgur.com/ro5dbbb.png)
 
