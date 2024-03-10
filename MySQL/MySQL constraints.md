@@ -1,16 +1,16 @@
 # MySQL constraints
 
 
-| Constraint | Description |  |
-| ---- | ---- | ---- |
-| PRIMARY KEY | Uniquely identifies each record in a table. Used to enforce the uniqueness of a particular column or a combination. |  |
-| FOREIGN KEY | Establishes a link between data in two tables, ensuring referential integrity. The values in this column must exist in the referenced column in another table. |  |
-| UNIQUE | Ensures that all values in a column are unique. Similar to PRIMARY KEY, but can be used for non-primary key columns. |  |
-| NOT NULL | Ensures that a column cannot have a NULL (empty) value. |  |
-| CHECK | Specifies a condition that must be satisfied for the values in a column. |  |
-| DEFAULT | Provides a default value for a column if no value is specified during an INSERT operation. |  |
-| ENUM | String object with a value chosen from a list of permitted values. if the value is not available in the `ENUM` an empty string will be inserted. |  |
-| SET | A SET can have zero or more values. Each of the values must be chosen from a list of permitted values. |  |
+| Constraint  | Description                                                                                                                                                    |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PRIMARY KEY | Uniquely identifies each record in a table. Used to enforce the uniqueness of a particular column or a combination.                                            |
+| FOREIGN KEY | Establishes a link between data in two tables, ensuring referential integrity. The values in this column must exist in the referenced column in another table. |
+| UNIQUE      | Ensures that all values in a column are unique. Similar to PRIMARY KEY, but can be used for non-primary key columns.                                           |
+| NOT NULL    | Ensures that a column cannot have a NULL (empty) value.                                                                                                        |
+| CHECK       | Specifies a condition that must be satisfied for the values in a column.                                                                                       |
+| DEFAULT     | Provides a default value for a column if no value is specified during an INSERT operation.                                                                     |
+| ENUM        | String object with a value chosen from a list of permitted values. if the value is not available in the `ENUM` an empty string will be inserted.               |
+| SET         | A SET can have zero or more values. Each of the values must be chosen from a list of permitted values.                                                         |
 
 
 

@@ -26,6 +26,7 @@
   - Allows optional default value if the attribute is not found.
 
 - **Example:**
+
   ```python
   value = getattr(obj, 'existing_attribute', default_value)
   ```
@@ -96,6 +97,7 @@ In Python, `__eq__` and `__ne__` are special methods that define the behavior of
   - Improves memory usage compared to dynamically adding attributes.
 
 - **Example:**
+
   ```python
   class MyClass:
       __slots__ = ('attribute1', 'attribute2')

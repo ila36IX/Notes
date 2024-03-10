@@ -76,3 +76,5 @@ Instead of a single static IP address for a domain, Round Robin DNS provides a l
 ### What is a DNS NS record?
 
 NS stands for *nameserver*, and the *nameserver* record indicates which DNS server is authoritative for that domain (i.e. which server contains the actual DNS records). Basically, NS records tell the Internet where to go to find out a domain's IP address. A domain often has multiple NS records which can indicate primary and secondary nameservers for that domain. Without properly configured NS records, users will be unable to load a website or application.
+
+![](https://obsidian.md/images/screenshot-1.0-hero-combo.png)

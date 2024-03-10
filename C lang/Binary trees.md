@@ -1,7 +1,6 @@
 # Tree Data Structure
 
 A tree is a nonlinear hierarchical data structure that consists of nodes connected by edges.
-
 ## Inorder traversal
 
 1. First, visit all the nodes in the left subtree
