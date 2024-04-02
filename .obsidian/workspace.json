@@ -4,35 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "b80ca3bf8ee34881",
+        "id": "d1e973a591240b24",
         "type": "tabs",
         "children": [
           {
-            "id": "3d75ec3ec2a11692",
+            "id": "dcdd0851af917ff2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MySQL/Lunix and MySQL Permissions.md",
+                "file": "HTLM & CSS/CSS.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "76a0ba1ccb864284",
+            "id": "8c0cb952b42d862e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/SQLAlchemy/SQLAlchemy behind the scenes.md",
+                "file": "Networking/Protocols/Protocols.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3f436ac612a85428",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5a7830b8c77c7a26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux commands.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -61,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "http",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/SQLAlchemy/SQLAlchemy behind the scenes.md",
+                "file": "linux commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/SQLAlchemy/SQLAlchemy behind the scenes.md",
+                "file": "linux commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/SQLAlchemy/SQLAlchemy behind the scenes.md"
+                "file": "linux commands.md"
               }
             }
           }
@@ -171,36 +195,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "76a0ba1ccb864284",
+  "active": "5a7830b8c77c7a26",
   "lastOpenFiles": [
-    "Python/SQLAlchemy/SQLAlchemy.md",
-    "MySQL/MySQL basics.md",
-    "MySQL/Lunix and MySQL Permissions.md",
-    "MySQL/Database Structures.md",
-    "MySQL/MySQL constraints.md",
-    "MySQL/MySQL Functions.md",
-    "MySQL/MySQL join.md",
-    "MySQL/MySQL Style Quide.md",
-    "MySQL/MySQL UTF8 types.md",
-    "MySQL/Database.md",
-    "Python/SQLAlchemy/SQLAlchemy behind the scenes.md",
-    "Networking/DHCP.md",
-    "Networking/Untitled.canvas",
-    "2024-03-02.md",
-    "Python/The datetime module.md",
+    "HTLM & CSS/HTLM.md",
+    "Networking/Protocols/HTTP requests.md",
+    "linux commands.md",
     "Networking/DNS.md",
-    "JavaScript/Object.md",
-    "HTLM & CSS/Web vs internet.md",
-    "HTLM & CSS/CSS.md",
-    "C lang/make.md",
-    "C lang/Binary trees.md",
-    "Networking/Internet.md",
-    "Networking/Load balancer.md",
+    "Networking/DHCP.md",
+    "Git.md",
+    "Python/Unit testing.md",
+    "Python/The datetime module.md",
+    "Networking/Protocols/SSH.md",
+    "Untitled.md",
+    "Networking/Protocols",
+    "Networking/Protocols/Protocols.md",
     "Networking/Network devops.md",
+    "Networking/TCP&IP model/Network segmentation.md",
+    "Networking/TCP&IP model/TCP-IP model.md",
+    "Networking/TCP&IP model/IPv4 Protocol.md",
+    "Networking/TCP&IP model/The access layer.md",
     "Networking/Web infrastructure.md",
+    "Networking/URL to WebPage.md",
+    "Networking/Types of networks.md",
+    "Networking/Untitled.canvas",
+    "Networking/The OSI model.md",
+    "Networking/Load balancer.md",
+    "Networking/Internet.md",
+    "HTLM & CSS/CSS.md",
+    "MySQL/Lunix and MySQL Permissions.md",
+    "MySQL/MySQL basics.md",
+    "MySQL/MySQL join.md",
     "Python/SQLAlchemy",
-    "Python/OOP !again.md",
-    "Python/Python ingeritance.md",
     "Python/Untitled.canvas",
     "JavaScript",
     "Pasted image 20240112013248.png",

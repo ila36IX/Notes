@@ -6,3 +6,7 @@
 - **Dialect** makes interacting with deferent DBAPIs easy, by abstracting the layer of writing SQL queries for specific database.
 - **Connection Pool** - Holds a collection of database connections in memory for easy re-use. 
 - **Schema** - Uses Python objects to represent tables, columns and datatypes.
+
+[**Check out this well written article**](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)
+
+

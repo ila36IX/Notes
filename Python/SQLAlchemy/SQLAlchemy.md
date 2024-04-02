@@ -1,4 +1,5 @@
-![](https://upload.wikimedia.org/wikipedia/commons/d/d7/SQLAlchemy.svg)
+			
+![](https://i.imgur.com/wNevAVO.png)
 # ORM?
 
 Object Relational Mapping (ORM) is a technique used in creating a "bridge" between object-oriented programs and, in most cases, relational databases.
@@ -55,11 +56,11 @@ Then we can use `Base` instance as blueprint to define a class that inherits fro
 from sqlalchemy import Column, Integer, String
 
 class User(Base):
-    __tablename__ = 'users'  # Tabel name
+    __tablename__ = 'users'  # Table name
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    age = Column(Integer)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(50), nullable=False, unique=True)
+    age = Column(Integer, ForeignKey("city_table.id"), default=18)
 
 Base.metadata.create_all(engine)
 ```
@@ -181,4 +182,65 @@ session.query(User).from_statement (
 
 ```python
 session.query(func.count(User.name), User.name).group_by(User.name).all()
+```
+
+## Generic Types
+
+![](https://i.imgur.com/Y9kmnlU.png)
+
+## Declare relationship between tables
+
+[Check this link](https://overiq.com/sqlalchemy-101/defining-schema-in-sqlalchemy-core/)
+
+## Join tables
+
+```python
+result = session.query(State, City).join(City, State.id == City.state_id).all()
+```
+
+## Relationships
+
+### Many To Many
+
+```python
+from sqlalchemy import Column, Integer, String, Table, ForeignKey  
+from sqlalchemy.orm import relationship  
+from sqlalchemy.ext.declarative import declarative_base  
+  
+Base = declarative_base()  
+  
+article_author_association = Table(  
+	'article_author',  
+	Base.metadata,  
+	Column('article_id', Integer, ForeignKey('articles.id')),  
+	Column('author_id', Integer, ForeignKey('users.id'))  
+)  
+  
+class User(Base):  
+	__tablename__ = 'users'  
+	id = Column(Integer, primary_key=True)  
+	name = Column(String)  
+	articles = relationship('Article', secondary=article_author_association, back_populates='authors')  
+  
+class Article(Base):  
+	__tablename__ = 'articles'  
+	id = Column(Integer, primary_key=True)  
+	title = Column(String)  
+	authors = relationship('User', secondary=article_author_association, back_populates='articles')
+```
+
+## Remove all tables
+
+```python
+from sqlalchemy import create_engine
+from sqlalchemy import MetaData
+
+
+db_str = "mysql://alien:password@localhost:3360/dbname"
+engine = create_engine(db_str)
+
+def clean_db():
+    m = MetaData()
+    m.reflect(engine)
+    m.drop_all(engine)
 ```

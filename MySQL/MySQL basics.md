@@ -1,5 +1,3 @@
-
-
 # SQL Basics
 
 ```mysql
@@ -121,6 +119,8 @@ SELECT name FROM customer_list LIMIT 5, 5;
 The output is rows 6 to 10 from the SELECT query.
 
 ## Joining Two Tables
+
+![](https://i.imgur.com/xe8IiEb.png)
 
 The statement has two parts: first, two table names separated by the INNER JOIN keywords; and second, the ON keyword that specifies the required columns to compose the condition.
 

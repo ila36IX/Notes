@@ -23,12 +23,12 @@ dig google.com
 
 ### A (address)
 
-An **A record** maps a domain name to the IP address (Version 4) of the computer hosting the domain. An A record uses a domain name to find the IP address of a computer connected to the internet
+An **A record** maps a domain name to the IP address (Version 4) of the remote machine hosting the domain. An A record uses a domain name to find the IP address of a computer connected to the internet
 ### AAAA Record
 
 Is the some as a **A record** the only difference is A records points to Version 4 IP address (IPv4), and the **AAAA** record points to version 6 IP address (IPv6).
 
-### CNAME Records
+### CNAME Record
 
 **CNAME records** can be used to alias one name to another. CNAME stands for Canonical Name.
 
@@ -36,23 +36,24 @@ A common example is when you have both `example.com` and `www.example.com` p
 
 - An `A` record for `example.com` pointing to the server IP address
 - A `CNAME` record for `www.example.com` pointing to `example.com`
+### TXT Record
 
+// todo
 ### MX Record (Mail Exchange)
 
 A mail exchanger record (MX record) specifies the mail server responsible for accepting email messages on behalf of a domain name. It is a resource record in the Domain Name System (DNS). It is possible to configure several MX records, typically pointing to an array of mail servers for load balancing and redundancy.
 
 ### How DNS works?
 
-![](https://ucf37b03d18f023a412529a8e52b.previews.dropboxusercontent.com/p/thumb/ACJ0HyCWfAwn9oPtSDzeWpTUxrP0xRKa4yKR6Bij-s6ihX5AbVaiGJB2NJ33Q4pn74DTbkRBFFbKJ5ty7rJTbOXqZ2HXFsvVJwA1IOh8GeyC4ZCkOHAtvmqMEEV9OJaS9QzVS5Laga6d8NEHOXMa72rXaQnms6TY1gJqva9hHP9UcbgRB0fyAxMaY_ipkDccPzGojKDcaIGt87eurdFeBLrg2eYu-YppRXNRqEjd4-wNDrdDO8RSyvnPzriSn-s2q8a-vUhle5hd0MnRKc9y_PeieS6lVv26CQpcv-yj4h4J7giPmBd4zHJNXj1-X4b8eAr6j-lXpQWkuzwJT2zWmbg1N9OPK2wmpPvex04QswdcIq-zPS0dRpsacob3LL7yLl8/p.png)
-
+![](https://www.cloudflare.com/img/learning/dns/dns-server-types/recursive-resolver.png)
 
 1. **Resolver Queries Root Server:**
 	- Resolver initiates the process by querying a root nameserver.
 	- Root server responds with the address of a Top Level Domain (TLD) DNS server.
 
-2. **Resolver Queries TLD Server:**
+2. **Resolver Queries TLD (Top Level Domain) Server:**
 	- Resolver queries the TLD server based on the TLD obtained from the root server.
-	- TLD server responds with the IP address of the domain's authoritative nameServer.
+	- TLD server responds with the IP address of the domain's authoritative ``nameServer``.
 
 3. **Resolver Queries Authoritative NameServer:**
 	- Resolver queries the authoritative nameserver for the specific domain.
@@ -76,5 +77,3 @@ Instead of a single static IP address for a domain, Round Robin DNS provides a l
 ### What is a DNS NS record?
 
 NS stands for *nameserver*, and the *nameserver* record indicates which DNS server is authoritative for that domain (i.e. which server contains the actual DNS records). Basically, NS records tell the Internet where to go to find out a domain's IP address. A domain often has multiple NS records which can indicate primary and secondary nameservers for that domain. Without properly configured NS records, users will be unable to load a website or application.
-
-![](https://obsidian.md/images/screenshot-1.0-hero-combo.png)

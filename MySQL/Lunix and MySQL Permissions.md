@@ -55,6 +55,10 @@ or you can add the user to the group that owns the file with
 
 ```shell
 usermod -a -G {group-name} username
+
+# you can use it to give a user a root power
+usermod -aG sudo username
+id username will tell you what that user permitions are
 ```
 
 If you want to apply it recursively to all the sub-directories: add the -R flag like this:
@@ -112,11 +116,19 @@ GRANT
 ON db_name.employees TO bob@localhost;
 ```
 
+### Revoke all privileges on database level
+
+```mysql
+REVOKE ALL PRIVILEGES ON phpmyadmin.* FROM 'phpmyadmin'@'localhost';`
+```
+
 ### Delete existing user
+
 Just as you can delete databases with `DROP`, you can use `DROP` to delete a user:
 
 ```mysql
 DROP USER 'username'@'localhost';
 ```
+
 More info [Here](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
 

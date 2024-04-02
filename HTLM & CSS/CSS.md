@@ -1,3 +1,5 @@
+
+[Do this first](https://youtube.com/shorts/ydGti7sLVOc?si=0j_YuIfC0xMwP_0x)
 ## Shorthand Background Image Values
 
 ```css
