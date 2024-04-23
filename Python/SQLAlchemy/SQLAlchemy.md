@@ -209,7 +209,7 @@ from sqlalchemy.ext.declarative import declarative_base
   
 Base = declarative_base()  
   
-article_author_association = Table(  
+article_author_association = Table (  
 	'article_author',  
 	Base.metadata,  
 	Column('article_id', Integer, ForeignKey('articles.id')),  

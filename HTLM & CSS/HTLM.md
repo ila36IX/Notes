@@ -30,11 +30,4 @@ Semantic HTML tags are tags that define the meaning of the content they contain.
 - `<strong>` (strong emphasis): Used for text that should be strongly emphasized.
 - `<code>`: A block of computer code.
 
-### Specificity
-
-The ID selector has a higher specificity weight than the class selector, and the class selector has a higher specificity weight than the type selector.
-
-**ID > class > type_type**
-
-[Specificity ](https://specifishity.com/)
 

@@ -1,3 +1,7 @@
+
+Deep dive into [http](https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)
+
+---
 ## GET Method
 
 A GET request retrieves data from a web server by specifying parameters in the URL portion of the request. This is the main method used for document retrieval. The following example makes use of GET method to fetch hello.htm:
@@ -10,6 +14,7 @@ Accept-Language: en-us
 Accept-Encoding: gzip, deflate
 Connection: Keep-Alive
 ```
+
 The server response against the above GET request will be as follows:
 
 ```
@@ -33,6 +38,7 @@ Connection: Closed
 ## HEAD Method
 
 The HEAD method is functionally similar to GET, except that the server replies with a response line and headers, but no entity-body. The following example makes use of HEAD method to fetch header information about hello.htm:
+
 ```
 HEAD /hello.htm HTTP/1.1
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
@@ -41,6 +47,7 @@ Accept-Language: en-us
 Accept-Encoding: gzip, deflate
 Connection: Keep-Alive
 ```
+
 The server response against the above HEAD request will be as follows:
 
 ```
@@ -61,6 +68,7 @@ You can notice that here server the does not send any data after header.
 ## POST Method
 
 The POST method is used when you want to send some data to the server, for example, file update, form data, etc. The following example makes use of POST method to send a form data to the server, which will be processed by a process.cgi and finally a response will be returned:
+
 ```
 POST /cgi-bin/process.cgi HTTP/1.1
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
@@ -163,6 +171,7 @@ Connection: Closed
 ## CONNECT Method
 
 The CONNECT method is used by the client to establish a network connection to a web server over HTTP. The following example requests a connection with a web server running on the host tutorialspoint.com:
+
 ```html
 CONNECT www.tutorialspoint.com HTTP/1.1
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
@@ -194,4 +203,4 @@ Allow: GET,HEAD,POST,OPTIONS,TRACE
 Content-Type: httpd/unix-directory
 ```
 
-Deep dive into [http](https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)
+

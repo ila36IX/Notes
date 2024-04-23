@@ -90,3 +90,11 @@ background-repeat: no-repeat;
 ```css
 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1); 
 ```
+
+### Specificity
+
+The ID selector has a higher specificity weight than the class selector, and the class selector has a higher specificity weight than the type selector.
+
+**ID > class > type_type**
+
+[Specificity ](https://specifishity.com/)

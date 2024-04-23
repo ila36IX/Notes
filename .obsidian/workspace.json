@@ -4,59 +4,83 @@
     "type": "split",
     "children": [
       {
-        "id": "d1e973a591240b24",
+        "id": "15185d0e427f4699",
         "type": "tabs",
         "children": [
           {
-            "id": "dcdd0851af917ff2",
+            "id": "c9a0672c8dc68999",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTLM & CSS/CSS.md",
+                "file": "Linux/ufw.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "8c0cb952b42d862e",
+            "id": "ec652229962c7843",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/Protocols/Protocols.md",
+                "file": "Python/Web scripting.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "3f436ac612a85428",
+            "id": "7b8b1c21b74e526c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "Python/SQLAlchemy/SQLAlchemy.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "5a7830b8c77c7a26",
+            "id": "b7b4cb0bc87264e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux commands.md",
+                "file": "Docker.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a1ff9f52520a7598",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Python/fabric.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "443183de466c6018",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/SSH.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -85,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "http",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.5
+    "width": 295.5026054382324
   },
   "right": {
     "id": "88538b4fd299a547",
@@ -134,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linux commands.md",
+                "file": "Linux/SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linux commands.md",
+                "file": "Linux/SSH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,11 +198,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linux commands.md"
+                "file": "Linux/SSH.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -195,36 +220,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5a7830b8c77c7a26",
+  "active": "443183de466c6018",
   "lastOpenFiles": [
-    "HTLM & CSS/HTLM.md",
-    "Networking/Protocols/HTTP requests.md",
-    "linux commands.md",
-    "Networking/DNS.md",
-    "Networking/DHCP.md",
-    "Git.md",
-    "Python/Unit testing.md",
+    "Python/fabric.md",
     "Python/The datetime module.md",
-    "Networking/Protocols/SSH.md",
-    "Untitled.md",
-    "Networking/Protocols",
-    "Networking/Protocols/Protocols.md",
-    "Networking/Network devops.md",
-    "Networking/TCP&IP model/Network segmentation.md",
-    "Networking/TCP&IP model/TCP-IP model.md",
-    "Networking/TCP&IP model/IPv4 Protocol.md",
-    "Networking/TCP&IP model/The access layer.md",
-    "Networking/Web infrastructure.md",
-    "Networking/URL to WebPage.md",
-    "Networking/Types of networks.md",
-    "Networking/Untitled.canvas",
-    "Networking/The OSI model.md",
-    "Networking/Load balancer.md",
-    "Networking/Internet.md",
-    "HTLM & CSS/CSS.md",
+    "Linux/cURL.md",
+    "Linux/SSH.md",
+    "Python/Unit testing.md",
+    "nginx.md",
+    "Qutes.md",
+    "Python/SQLAlchemy/SQLAlchemy.md",
+    "Linux/ufw.md",
+    "Docker.md",
     "MySQL/Lunix and MySQL Permissions.md",
+    "Networking/DNS.md",
+    "Linux/HAproxy (Load balancer).md",
+    "Linux/linux commands.md",
+    "Python/sys & argv.md",
+    "Python/Web scripting.md",
+    "Python/Python ingeritance.md",
+    "MySQL/Asynchronous Replication.md",
+    "MySQL/Database & mysql installation.md",
+    "MySQL/Database Structures.md",
     "MySQL/MySQL basics.md",
-    "MySQL/MySQL join.md",
+    "MySQL/MySQL UTF8 types.md",
+    "Pasted image 20240418003146.png",
+    "MySQL/MySQL Functions.md",
+    "Networking/Protocols/HTTP requests.md",
+    "HTLM & CSS/CSS.md",
+    "HTLM & CSS/HTLM.md",
+    "php",
+    "Linux",
+    "Networking/Protocols",
+    "Networking/Untitled.canvas",
     "Python/SQLAlchemy",
     "Python/Untitled.canvas",
     "JavaScript",

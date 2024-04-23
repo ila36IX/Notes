@@ -119,7 +119,7 @@ ON db_name.employees TO bob@localhost;
 ### Revoke all privileges on database level
 
 ```mysql
-REVOKE ALL PRIVILEGES ON phpmyadmin.* FROM 'phpmyadmin'@'localhost';`
+REVOKE ALL PRIVILEGES ON phpmyadmin.* FROM 'phpmyadmin'@'localhost';
 ```
 
 ### Delete existing user
