@@ -173,7 +173,7 @@ Then run this command:
 python3 -m unittest test_divide
 
 # Or you can request an auto-discovery
-python -m unittest discover
+python3 -m unittest discover
 ```
 
 After running this command, the standard output will likely contain something like this:

@@ -10,5 +10,15 @@ curl -sI getaline.com
 ```
 
 `-I`:  For the response header
-`-H`: Send a custom request header
+`-H`: Send a custom request header:
+
+```shell
+-H "Content-Type: application/json"
+```
+
 `-d`: Send query string
+
+```bash
+-d '{"name": "Bossier City", "testing": "isEverything"}'
+```
+

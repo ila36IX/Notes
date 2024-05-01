@@ -19,13 +19,13 @@ engine = create_engine('URL')
 
 ### Wait URL, what? where?
 
-URL is just a string formatting providing a way to give the the instance engine the data that will use to connect to Database, and it is as simple as this:
+URL is just a string formatting providing a way to give the instance engine the data that will use to connect to Database, and it is as simple as this:
 
 ```
 dialect+driver://username:password@host:port/database
 ```
 
-- **Dialect:**  Name of the SQLAlchemy dialect, a name such as sqlite, mysql, postgresql, oracle, or mssql.
+- **Dialect:**  Name of the SQLAlchemy dialect, a name such as `sqlite`, `mysql`, `postgresql`, `oracle`, or `mssql`.
 - **Driver:** Usually it's optional as alchemy tries its best to include the default DBAPI (if it available) - this default is typically the most widely known driver available for that backend. in my case using the default wasn't working because it wasn't available in my system, so the solution was one of those:
 	- **Specify a different driver:** an alternative driver may already be installed on your system but isn't the default one used by SQLAlchemy. **mysqlconnector** driver is in my system but wasn't the default one that SQLAlchemy using, so putting it in the URL does the trick. 
 	- Download the required file for the default driver to work, I used this [link](https://askubuntu.com/questions/1321141/unable-to-install-mysqlclient-on-ubuntu-20-10) to download the necessary files for the SQLAlchamy default required driver.
@@ -130,8 +130,22 @@ session.add_all([
     User(name='fred', fullname='Fred Flintstone', nickname='freddy')])
 ```
 
-### Querying
+# Querying
 
+## Get one record
+#### ``Query.one()`` 
+- ``MultipleResultsFound ``if the number of rows was more than 1
+- ``NoResultFound`` if no rows were found.
+- Returns the sole result row (as tuple)
+#### ``Query.first()`` executes the query with LIMIT 1
+- Returns the result row as tuple
+- ``None`` if no rows were found
+#### ``Query.scalar()`` 
+- Raises ``MultipleResultsFound`` if the number of rows was more than 1
+- Returns None If no rows were found.
+- Returns the first column of the sole result row.
+
+## Get all records
 
 ```python
 session.query(User, User.name).all()
@@ -162,7 +176,8 @@ query.filter(and_(User.name == 'ed', User.name == 'wendy'))
 ```
 
 ```python
-session.query(User.name, User.fullname)  # [("ali", "ali jbari"), ("test", "testing")]
+session.query(User.name, User.fullname)  
+# [("ali", "ali jbari"), ("test", "testing")]
 ```
 
 ```python
@@ -203,32 +218,30 @@ result = session.query(State, City).join(City, State.id == City.state_id).all()
 ### Many To Many
 
 ```python
-from sqlalchemy import Column, Integer, String, Table, ForeignKey  
-from sqlalchemy.orm import relationship  
-from sqlalchemy.ext.declarative import declarative_base  
-  
-Base = declarative_base()  
-  
-article_author_association = Table (  
-	'article_author',  
-	Base.metadata,  
-	Column('article_id', Integer, ForeignKey('articles.id')),  
-	Column('author_id', Integer, ForeignKey('users.id'))  
-)  
-  
-class User(Base):  
-	__tablename__ = 'users'  
-	id = Column(Integer, primary_key=True)  
-	name = Column(String)  
-	articles = relationship('Article', secondary=article_author_association, back_populates='authors')  
-  
-class Article(Base):  
-	__tablename__ = 'articles'  
-	id = Column(Integer, primary_key=True)  
-	title = Column(String)  
-	authors = relationship('User', secondary=article_author_association, back_populates='articles')
+Base = declarative_base()
+
+author_book = Table('author_book', Base.metadata, 
+    Column('author_id', Integer(), ForeignKey("authors.id")),
+    Column('book_id', Integer(), ForeignKey("books.id"))
+)
+
+class Author(Base):
+    __tablename__ = 'authors'
+    id = Column(Integer, primary_key=True)
+    first_name = Column(String(100), nullable=False)
+    last_name = Column(String(100), nullable=False)
+
+class Book(Base):
+    __tablename__ = 'books'
+    id = Column(Integer, primary_key=True)
+    title = Column(String(100), nullable=False)
+    copyright = Column(SmallInteger, nullable=False)
+    author_id = Column(Integer, ForeignKey('authors.id'))
+    authors = relationship("Author", secondary=author_book, backref="books")
 ```
 
+- Given an `Author` object `a`, we can access all books written by him as `a.books` (because of ``backref``). 
+- Given a `Book` object `b`, `b.authors` (because of book class method `authors`) will return a list of `Author` objects.
 ## Remove all tables
 
 ```python
