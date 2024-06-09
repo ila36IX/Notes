@@ -1,5 +1,26 @@
 
 [Do this first](https://youtube.com/shorts/ydGti7sLVOc?si=0j_YuIfC0xMwP_0x)
+# Do this first
+
+```css
+html {
+
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+
+body {
+	font-family: system-ui;
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+
+* {
+	box-sizing: border-box;
+}
+```
 ## Shorthand Background Image Values
 
 ```css
@@ -8,6 +29,19 @@ div {
 }
 ```
 
+## img
+
+```css
+img {
+	object-fit: cover;
+	width: 100%;
+	max-width: 350px;
+	height: 300px;
+	object-fit: cover;
+}
+```
+
+Some of images will become distorted. This is because the images have different aspect ratios. Rather than setting each aspect ratio individually, you can use the `object-fit` property to determine how images should behave.
 
 ## Centering a div
 
@@ -74,7 +108,6 @@ The `abolute` position is making by default the element to be relative to the wh
 ```
 
 
-
 ## Background image tips
 
 ```css
@@ -91,6 +124,29 @@ background-repeat: no-repeat;
 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1); 
 ```
 
+# Box sizing
+
+```css
+.gallery {
+	 border: 5px solid red;
+	 width: 50%;
+}
+
+img {
+	 width: 100%;
+	 border: 5px solid blue;
+	 padding: 5px;
+}
+```
+
+Even though `img` width is 100% of it's container (`.gallery`), the images elements will overflow because of the padding!
+The `box-sizing` property, when set to `border-box`, will ensure that the width and height of the selected element will remain the same, even if the padding and border have been changed, The content of the element will shrink to make room for the padding and border.
+
+```css
+img {
+	box-sizing: border-box;
+}
+```
 ### Specificity
 
 The ID selector has a higher specificity weight than the class selector, and the class selector has a higher specificity weight than the type selector.

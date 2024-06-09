@@ -1,18 +1,19 @@
 # Database
 
 ## What is a database?
+
 **Database** is a systematic and structured collection of data that is organized and stored in a way that allows efficient management and updating of that data.
 
 ## Why Databases?
 
 Storing data in your application's memory or flat files has limitations such as data loss on server shutdown. Databases address these shortcomings and provide features like ACID properties:
 
-| ACID Properties | Description |
-| --------------- | ----------- |
-| Atomicity       | Ensures transactions are atomic, either fully completed or not at all. |
+| ACID Properties | Description                                                                  |
+| --------------- | ---------------------------------------------------------------------------- |
+| Atomicity       | Ensures transactions are atomic, either fully completed or not at all.       |
 | Consistency     | Enforces rules for data integrity; transactions must abide by defined rules. |
-| Isolation       | Guarantees that simultaneous operations won't interfere with each other. |
-| Durability      | Persists data even in the face of unexpected server shutdowns. |
+| Isolation       | Guarantees that simultaneous operations won't interfere with each other.     |
+| Durability      | Persists data even in the face of unexpected server shutdowns.               |
 
 ## Why Not Flat Files?
 

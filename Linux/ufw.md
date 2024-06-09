@@ -27,12 +27,13 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 ```
 
-The two essential protocols that we want to keep active are `http` and `ssh`:
+The two essential protocols that we want to keep active are `http`, `https` and `ssh`:
 
 ```bash
 sudo ufw allow ssh
 sudo ufw allow http
 sudo ufw allow https
+sudo ufw allow 'Nginx Full'
 ```
 
 Now if everything goes well, you can enable the `ufw` again.
@@ -41,7 +42,7 @@ Now if everything goes well, you can enable the `ufw` again.
 echo "y" | sudo ufw enable
 ```
 
-If you ever deny port ``22/TCP`` and log out of your server, you will not be able to reconnect to your server via SSH, always check if the connection via `ssh` is not refused before closing the main TCP session where you made something wrong. 
+If you ever deny port ``22/TCP`` and log out from your server, you will not be able to reconnect to to it via SSH, always check if the connection via `ssh` is not refused before closing the main TCP session where you made something wrong. 
 
 UFW rule that allows connections from your replica server through the source’s firewall.
 

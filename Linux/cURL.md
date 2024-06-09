@@ -1,6 +1,6 @@
 ## curl
 
-[More infos](https://www.youtube.com/watch?v=I6id1Y0YuNk)
+[More infos video](https://www.youtube.com/watch?v=I6id1Y0YuNk)
 
 Transfers data from or to a server.
  
@@ -20,5 +20,11 @@ curl -sI getaline.com
 
 ```bash
 -d '{"name": "Bossier City", "testing": "isEverything"}'
+```
+
+`-X`: Specify the request method
+
+```bash
+-X PUT
 ```
 

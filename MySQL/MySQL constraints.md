@@ -19,9 +19,10 @@ CREATE TABLE Authors(
 	Id INTEGER PRIMARY KEY, 
 	LastName TEXT NOT NULL,
 	FirstName TEXT NOT NULL, 
-	City VARCHAR(55)),
+	City VARCHAR(55),
 	Gender TEXT ENUM ("male", "female", "other"),
-	CIN VARCHAR(30) UNIQUE
+	CIN VARCHAR(30) UNIQUE,
+	
 );
 
 CREATE TABLE Books(
@@ -29,7 +30,8 @@ CREATE TABLE Books(
 	Title VARCHAR(50),
     AuthorId INTEGER,
     Released INT DEFAULT YEAR(CURDATE()),
-    Awards SET('BookBrowse', 'Pulitzer', 'Booker', 'Edgar'), -- In insertion values are separated by commas.                                                                      -- No spaces are allowed.
+    Awards SET('BookBrowse', 'Pulitzer', 'Booker', 'Edgar'), 
+    -- In insertion values are separated by commas.                                    -- No spaces are allowed.
     FOREIGN KEY(AuthorId)
 	    REFERENCES Authors(AuthorId)
 );

@@ -118,6 +118,99 @@ SELECT name FROM customer_list LIMIT 5, 5;
 ```
 The output is rows 6 to 10 from the SELECT query.
 
+## Unique value
+
+```mysql
+SELECT DISTINCT names FROM db_table; 
+```
+## Group by
+
+```mysql
+SELECT class, AVG(age) FROM db_table GROUP BY class;  
+```
+#### GROUP_CONCAT
+
+```mysql
+SELECT
+    places.`name`,
+    GROUP_CONCAT(amenities.`name` SEPARATOR ', ') as amenities
+FROM
+    places
+    JOIN place_amenity ON place_amenity.place_id = places.id
+    JOIN amenities ON place_amenity.amenity_id = amenities.id
+GROUP BY places.`name`;
+```
+## Just the rows with tv and tub (Many to Many hell)
+
+```mysql
+SELECT column_lists FROM table_name WHERE condition  
+INTERSECT  
+SELECT column_lists FROM table_name WHERE condition;   
+```
+
+```mysql
+SELECT
+    place_id,
+    count(amenities.`id`),
+    group_concat(amenities.`name` separator ', ') as amenities
+FROM
+    place_amenity
+    JOIN amenities ON place_amenity.amenity_id = amenities.id
+WHERE
+    place_id in (
+        SELECT
+            place_id
+        FROM
+            place_amenity
+            JOIN amenities ON place_amenity.amenity_id = amenities.id
+        WHERE
+            amenities.`name` = 'Tv'
+        INTERSECT
+        SELECT
+            place_id
+        FROM
+            place_amenity
+            JOIN amenities ON place_amenity.amenity_id = amenities.id
+        WHERE
+            amenities.`name` = 'Hot tub'
+    )
+group by place_id;
+```
+## Examples
+
+```mysql 
+Select
+    distinct places.`name`
+from
+    places
+    JOIN place_amenity ON place_amenity.place_id = places.id
+    JOIN amenities ON place_amenity.amenity_id = amenities.id
+    JOIN cities ON cities.`id` = places.`city_id`
+    JOIN states ON states.`id` = cities.`state_id`
+where
+    cities.`id` = "660c9bbd-76c4-454f-b9a4-87efab0e948f"
+    or states.`id` = "5976f0e7-5c5f-4949-aae0-90d68fd239c0"
+    or states.`id` = "541bba6e-9543-4b33-8062-77ef26cd9778"
+    and (
+        places.`id` in (
+            SELECT
+                place_id
+            FROM
+                place_amenity
+                JOIN amenities ON place_amenity.amenity_id = amenities.id
+            WHERE
+                amenities.`name` = 'Tv'
+            INTERSECT
+            SELECT
+                place_id
+            FROM
+                place_amenity
+                JOIN amenities ON place_amenity.amenity_id = amenities.id
+            WHERE
+                amenities.`name` = 'Hot tub'
+        )
+    );
+```
 ## Joining Two Tables
 
 ![](https://i.imgur.com/xe8IiEb.png)
@@ -202,6 +295,4 @@ UPDATE actor SET last_name= UPPER('cruz')
 	WHERE first_name LIKE 'PENELOPE'
 	AND last_name LIKE 'GUINESS';
 ```
-
-
 

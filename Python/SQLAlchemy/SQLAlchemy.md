@@ -214,7 +214,44 @@ result = session.query(State, City).join(City, State.id == City.state_id).all()
 ```
 
 ## Relationships
+### One to One
 
+```python
+class Person(Base):
+    __tablename__ = 'persons'
+    id = Column(Integer(), primary_key=True)
+    name = Column(String(255), nullable=False)
+    designation = Column(String(255), nullable=False)
+    doj = Column(Date(), nullable=False)
+    dl = relationship('DriverLicense', backref=backref('person', uselist=False), uselist=False)
+
+class DriverLicense(Base):
+    __tablename__ = 'driverlicense'
+    id = Column(Integer(), primary_key=True)
+    license_number = Column(String(255), nullable=False)
+    renewed_on = Column(Date(), nullable=False)
+    expiry_date = Column(Date(), nullable=False)
+    person_id = Column(Integer(), ForeignKey('persons.id'))  # Foreign key
+```
+
+If we hadn't passed `uselist=False` to the `relationship()` function then the relationship between `Person` and `DriverLicense` would be one-to-many and `p.dl` would return a list of `DriverLicense` objects rather than a single object, the some thing goes with `dl.person`.
+### One To Many
+
+```python
+class City(Base):
+	__tablename__ = 'cities'
+	state_id = Column(String(60), ForeignKey('states.id'), nullable=False)
+	name = Column(String(128), nullable=False)
+
+class State(Base):
+	__tablename__ = 'states'
+	name = Column(String(128), nullable=False)
+	cities = relationship(
+		"City",
+		backref="state",
+		cascade="all, delete-orphan"
+	)
+```
 ### Many To Many
 
 ```python

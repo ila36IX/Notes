@@ -18,8 +18,7 @@ today = today.replace(year=2003, month=1, day=15)
 ```
 ### Note
 
-	The `replace` method returns a changed _date_ object, so you must remember to assign to
-	some variable.
+The `replace` method returns a changed _date_ object, so you must remember to assign it to a variable.
 ### today method
 
 The instance Objects  of `date`  class represent a date consisting of the year, month, and day.  get the current local date using the `today` method.
