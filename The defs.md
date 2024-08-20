@@ -16,3 +16,6 @@ An application server is a software framework that provides an environment for d
 The main difference between an application server and a web server is their primary purpose and the layer of the application stack they operate on.
 - A web server is focused on delivering web content (HTML, CSS, JavaScript files) to clients over the HTTP protocol. It handles HTTP requests and responses, serving static web pages or routing requests to web applications.
 - An application server, on the other hand, is designed to host and run application logic and business rules. It provides an environment for executing application code (e.g., Java, .NET) and integrating with databases, messaging systems, and other enterprise services. An application server typically sits behind a web server, processing requests from the web server and returning dynamic content or data.
+## OS
+
+Collection of software to facilitate interaction with hardware.
