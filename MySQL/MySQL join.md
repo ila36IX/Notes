@@ -1,7 +1,5 @@
 # MySQL join
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/3/bc2575fee3303b731031.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20231217%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231217T173039Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=3ea0b2116fa244434a3c5c57d0d601e87aa0b295ed3688e3d9fcdf615dfe25d3)
-
 ## What is join?
 
 JOIN is a clause used in SQL to link data from one table to another table using one or more data column shared between two tables.

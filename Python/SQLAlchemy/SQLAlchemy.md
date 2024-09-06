@@ -28,13 +28,13 @@ dialect+driver://username:password@host:port/database
 - **Dialect:**  Name of the SQLAlchemy dialect, a name such as `sqlite`, `mysql`, `postgresql`, `oracle`, or `mssql`.
 - **Driver:** Usually it's optional as alchemy tries its best to include the default DBAPI (if it available) - this default is typically the most widely known driver available for that backend. in my case using the default wasn't working because it wasn't available in my system, so the solution was one of those:
 	- **Specify a different driver:** an alternative driver may already be installed on your system but isn't the default one used by SQLAlchemy. **mysqlconnector** driver is in my system but wasn't the default one that SQLAlchemy using, so putting it in the URL does the trick. 
-	- Download the required file for the default driver to work, I used this [link](https://askubuntu.com/questions/1321141/unable-to-install-mysqlclient-on-ubuntu-20-10) to download the necessary files for the SQLAlchamy default required driver.
+		- Download the required file for the default driver to work, I used this [link](https://askubuntu.com/questions/1321141/unable-to-install-mysqlclient-on-ubuntu-20-10) to download the necessary files for the SQLAlchamy default required driver.
 ## Executing a direct a query
 
 ```python
 conn = engine.connect()
 result = conn.execute("select * from table")
-print result.fetchall()
+print(result.fetchall())
 conn.close()
 ```
 

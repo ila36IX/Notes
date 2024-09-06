@@ -52,3 +52,30 @@ SELECT SECOND(NOW());
 ```mysql
 SELECT d, LENGTH(d) FROM table_name;
 ```
+
+### The  `COALESCE` function
+ 
+```mysql
+# if null use the second parm
+select id, COALESCE(username, 'unknow') from table_name;
+SELECT IFNULL(split, '2022') from your_table;
+```
+
+### The `Last_INSERTED_ID` function
+
+```mysql
+INSERT INTO users (name) VALUES ("Bob");
+SET @user_bob = LAST_INSERT_ID();
+
+INSERT INTO projects (name) VALUES ("Python is cool");
+SET @project_py = LAST_INSERT_ID();
+
+INSERT INTO corrections (user_id, project_id, score) VALUES (@user_bob, @project_py, 91);
+```
+
+### The `DATE_SUB` function
+
+```mysql
+-- Records with last meeting happend more than a month from `currdate`.
+SELECT * FROM WHERE last_meeting < DATE_SUB(CURDATE(), INTERVAL 1 MONTH);
+```
