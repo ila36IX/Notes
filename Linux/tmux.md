@@ -9,7 +9,7 @@ To use `tmux`, you'll need to know some important commands and key bindings. Her
 5. `tmux kill-session -t session_name` - Kill a specific tmux session.
 6. `tmux kill-server` - Kill the tmux server and all sessions.
 7. `tmux a -t session_name' enter the emux sesion
-8. `tmux new-session -ssession_name -d "command to run"`
+8. `tmux new-session session_name -d "command to run"`
 
 **Key Bindings (Prefix + Key):**
 
@@ -36,3 +36,9 @@ The default prefix key in tmux is `Ctrl+b`. You can press this combination and t
 You can also customize tmux by creating a `.tmux.conf` file in your home directory and adding your preferred configurations and key bindings.
 
 Note: The `Prefix` key (`Ctrl+b` by default) can be changed by modifying the `set-option -g prefix` setting in your `.tmux.conf` file.
+
+# Example:
+
+```bash
+tmux new-session -d 'export HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db HBNB_API_HOST=0.0.0.0 HBNB_API_PORT=5000 gunicorn --bind 0.0.0.0:5002 api.v1.app:app'
+```

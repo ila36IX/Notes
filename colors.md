@@ -1,0 +1,6 @@
+- primary - (green): `#369a31`
+- secondary-light (blue-light):  `#373944`
+- secondary (blue): `#2b2c36`
+- secondary-dark (blue-dark): `#23232c`
+- white: `#ebebec`
+- white-light: `#ebebec`

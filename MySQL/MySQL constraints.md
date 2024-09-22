@@ -38,3 +38,9 @@ CREATE TABLE Books(
 ```
 
 We create the `Books` table. Here we have an `AuthorId` column name, which acts as a foreign key. It references to the primary key of the `Authors` table.
+
+Ignoring the foreign key constraint:
+
+```sql
+SET FOREIGN_KEY_CHECKS = 0;
+```

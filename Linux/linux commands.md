@@ -1,4 +1,4 @@
-
+tr
 To view all running processes along with their child processes in a “tree” format, use the following command:
 
 ```bash

@@ -31,3 +31,7 @@ Semantic HTML tags are tags that define the meaning of the content they contain.
 - `<code>`: A block of computer code.
 
 
+### Status codes
+
+- `401 Unnauthorized`: HTTP status code for a request unauthorized
+- `403 Forbidden` HTTP status code for a request where the user is authenticate but not allowed to access to a resource
