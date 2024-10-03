@@ -136,7 +136,7 @@ session.add_all([
 #### ``Query.one()`` 
 - ``MultipleResultsFound ``if the number of rows was more than 1
 - ``NoResultFound`` if no rows were found.
-- Returns the sole result row (as tuple)
+- Returns the sole result row
 #### ``Query.first()`` executes the query with LIMIT 1
 - Returns the result row as tuple
 - ``None`` if no rows were found

@@ -14,10 +14,17 @@
 > `hackerearth` give a very useful articles to help you solve the puzzles
 
 
-
 ## Java
 [Java Concurrency in Practice](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
 
-## Design patterns
+## System design patterns
 
 [learn with practical examples DP](https://refactoring.guru/design-patterns)
+
+## Design inspiration
+
+- [Mobbin](https://mobbin.com/)
+- [Awwwards](https://www.awwwards.com/)
+- [Dark design](https://dark.design/)
+- [Refero](https://refero.design/)
+- [logo system](https://logosystem.co/logo)

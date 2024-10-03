@@ -1,3 +1,23 @@
+[learn more](https://docker-curriculum.com/#getting-started)
+**TLDR;**
+`docker pull` - This command is used to pull a Docker ubuntu image from a registry.
+`docker run` - creates and starts a Docker container from an image
+`docker start` - is used for containers that have been previously created but are currently stopped. If you want to create and start a new container in a single step, you can use the `docker run` command.
+`docker exec` - runs a command in a running Docker container.
+`docker stop` - stops a running Docker container.
+`docker ps` -a - This command is used to list all of the Docker containers, including those that are not running.
+`docker kill` - This command is used to forcefully stop a Docker container.
+`docker rm` - This command is used to remove a Docker container.
+`docker images` - This command is used to list all of the Docker images that are stored on your machine.
+`docker search` - This command is used to search for Docker images in a registry.
+`docker inspect` - This command is used to get detailed information about a Docker container or image.
+`docker logs` - This command is used to view the logs for a Docker container.
+`docker commit` - This command is used to create a new Docker image from an existing container.
+`docker push` - This command is used to push a Docker image to a registry.
+`docker tag` - This command is used to tag a Docker image with a new name or identifier.
+`docker build` - This command is used to build a Docker image from a Dockerfile.
+`docker compose` - This command is used to run a Docker application that is defined in a Docker Compose file.
+
 # Docker playing around
 
 ```bash
