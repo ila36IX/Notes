@@ -7,7 +7,7 @@ arr.length;
 arr.at(-1);
 arr.pop();   // removes the last element and return it
 arr.shift(); // removes the first element and return it
-arr.shift(el1, el2, /*...*/, elN); // add element to the end
+arr.push(el1, el2, /*...*/, elN); // add element to the end
 fruits.unshift(el1 /*...*/); // / add element to the beginning
 ```
 
