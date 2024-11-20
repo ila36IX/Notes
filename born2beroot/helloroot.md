@@ -1,7 +1,7 @@
 
 # Born2BeRoot
 
-![](https://i.imgflip.com/9amr07.jpg)
+![](https://i.imgur.com/8TOLpQw.png)
 
 > Note: In this project, you'll find many vague words that are probably new to you, or you've already heard of them but don't know exactly what they are. The mission of this project is that you need to have a simple idea about each one of these words. Ask a peer what exactly an "IP" address is, what is the reason to use SSH...
 > 
@@ -66,7 +66,7 @@ From this point, we have a working system. To be clear, the "UI" or interface (w
 
 That's why having a CLI (Command Line Interface) is sometimes enough. You interact with the machine using only the command line. The machine you used to get this file that you currently reading doesn't have a display because its mission is solely to respond to your request by sending this file. Similarly, most servers don't have a UI (User Interface); you interact with them using only the CLI.
 
-Can you tell me what a server is?
+Can you tell me what a server is? "I'll let you find out by yourself :)"
 
 The GUI (Graphical User Interface), sometimes called a DE (Desktop Environment), it is the part of the system that allows us to interact using a mouse, a display screen, and other visual elements. It's composed of processes running in the background that interact with your screen drivers. For example, if you have ever used Ubuntu, it uses "GNOME" as its desktop environment.
 
@@ -154,56 +154,7 @@ When a partition is **mounted** to a directory (e.g., `/home`), any files you ac
 
 ![](https://i.pinimg.com/originals/f1/56/6a/f1566aef2c7fe30b37490f0ae02e817b.png)
 
-- /boot
-- /var
-- /etc
-- /home
-- /dev
-- /proc
-- /sys
-- /tmp
-- /usr
 
-Networking:
-
-- SSH
-- Network protocols
-- IP addressing
-- DNS
-- Ports
-- UFW (firewall)
-
-User Management:
-
-- Users and groups
-- Sudo privileges
-- Password policies
-- Authentication
-
-System Administration:
-
-- System logs
-- Cron jobs
-- System monitoring
-- Backup management
-- Package management (apt)
-- Service management (systemd)
-
-Security:
-
-- SELinux/AppArmor
-- SSH key pairs
-- SSL/TLS
-- Firewall rules
-- Directory permissions
-
-Commands & Tools:
-
-- Basic shell commands
-- Text editors (vim/nano)
-- Monitoring tools (top, htop)
-- Disk tools (fdisk, parted)
-- Networking tools (netstat, ss)
 
 
 
@@ -381,4 +332,53 @@ password requisite pam_pwquality.so retry=3 minlen=12 dcredit=-1 ucredit=-1 lcre
 `maxrepeat=3`: it must not contain more than 3 consecutive identical character (for example `111` is not allowed)
 
 ``
-``
+- /boot
+- /var
+- /etc
+- /home
+- /dev
+- /proc
+- /sys
+- /tmp
+- /usr
+
+Networking:
+
+- SSH
+- Network protocols
+- IP addressing
+- DNS
+- Ports
+- UFW (firewall)
+
+User Management:
+
+- Users and groups
+- Sudo privileges
+- Password policies
+- Authentication
+
+System Administration:
+
+- System logs
+- Cron jobs
+- System monitoring
+- Backup management
+- Package management (apt)
+- Service management (systemd)
+
+Security:
+
+- SELinux/AppArmor
+- SSH key pairs
+- SSL/TLS
+- Firewall rules
+- Directory permissions
+
+Commands & Tools:
+
+- Basic shell commands
+- Text editors (vim/nano)
+- Monitoring tools (top, htop)
+- Disk tools (fdisk, parted)
+- Networking tools (netstat, ss)``
