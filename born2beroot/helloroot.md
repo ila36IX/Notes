@@ -28,13 +28,13 @@ Q: But how is it possible to an OS (operating system) to run just like a program
 
 What is the difference between Host OS vs Guest OS? *"Exited to hear your answer :)"*
 
-Good now we have a good understanding of what a VM is, so let us create one, first you need to have a piece of software called `vertaulBox` (a Type 2 hypervisor) to create and run virtual machines on our computer.
+Good now we have a good understanding of what a VM is, so let us create one, first you need to have a piece of software called `virtaulBox` (a Type 2 hypervisor) to create and run virtual machines on our computer.
 
 ![](https://i.imgur.com/LqQxxtt.png)
 
 [⏯ Watch](https://youtu.be/wX75Z-4MEoM?si=gk-KOOuULc96tl0Q)
 
-Now by installing the `vertualBox`, it's like we have the virtual hardware, what do you think we still need? yes we need an OS (operating system), like Linux the 🐐, but what is Linux?
+Now by installing the `virtualBox`, it's like we have the virtual hardware, what do you think we still need? yes we need an OS (operating system), like Linux the 🐐, but what is Linux?
 
 **Linux** was created in the 1990 by Linus Torvalds, it started just as side project to practice operating systems, and grows to be one of the bigger and complicated projects in the open-source community with more that 1.3M commits in [GitHub](https://github.com/torvalds/linux):
 
@@ -68,7 +68,7 @@ That's why having a CLI (Command Line Interface) is sometimes enough. You intera
 
 Can you tell me what a server is?
 
-The GUI (Graphical User Interface), sometimes called a DE (Desktop Environment), is the part of the system that allows us to interact using a mouse, a display screen, and other visual elements. It's composed of processes running in the background that interact with your screen drivers. For example, if you have ever used Ubuntu, it uses "GNOME" as its desktop environment.
+The GUI (Graphical User Interface), sometimes called a DE (Desktop Environment), it is the part of the system that allows us to interact using a mouse, a display screen, and other visual elements. It's composed of processes running in the background that interact with your screen drivers. For example, if you have ever used Ubuntu, it uses "GNOME" as its desktop environment.
 
 ![](https://i.imgur.com/UfYcO6A.png)
 
@@ -133,7 +133,11 @@ __Primary Partition:__ This is a primary division of the hard drive that can hos
 
 __Logical Partition:__ subdivision within an extended partition that can be used to store data or install operating systems, it is usually not bootable. They reside within an extended partition.
 ### Logical Volumes vs Logical Partitions
+
 [READ](https://medium.com/@ahmedmansouri/understanding-disk-partitioning-in-linux-logical-volumes-vs-logical-partitions-796d46587d64)
+
+![](https://contabo.com/blog/wp-content/uploads/2023/03/image.png)
+
 ### How Mounting Works?
 
 **Mounting** means connecting a storage device or partition to a specific directory in the Linux file system.
@@ -219,7 +223,7 @@ setfont /usr/share/consolefonts/Lat7-Terminus28x14.psf
 
 Install the `sudo` utility, which allows executing single commands with superuser or alternative user privileges. Unlike logging in as root and performing all actions with unrestricted access, `sudo` provides a more secure approach.
 
-Q: If `sudo` command is just to run command as `root` user, why don't we just log-in as root and do everything we need dreely? "I'll let finding out why to you!"
+Q: If `sudo` command is just to run command as `root` user, why don't we just log-in as root and do everything we need freely? "I'll let finding out why to you!"
 
 You need to have two users in your created machine:
 - root (It should be exists by default)
@@ -350,3 +354,31 @@ PASS_WARN_AGE 7
 - `PASS_MAX_DAYS 30`: Maximum number of days a password can be used before mandatory change (30 days)
 - `PASS_MIN_DAYS 2`: Minimum number of days between password changes (prevents frequent changes)
 - `PASS_WARN_AGE 7`: Number of days before password expiration that user receives warning (7 days)
+## Password rules
+
+![](https://images.hothardware.com/contentimages/newsitem/36056/content/Password_Meme.jpg)
+
+- [READ: pwquality - Linux Manuals](https://www.systutorials.com/docs/linux/man/5-pwquality.conf/)
+- [READ: Enforce Password Policies in Linux](https://www.linuxtechi.com/enforce-password-policies-linux-ubuntu-centos/)
+
+To set password rules, you need first a simple program that will made that process easier:
+
+```sh
+sudo apt install libpam-pwquality
+```
+
+Than change the file `/etc/pam.d/common-password` by adding the required policies.
+
+```
+password requisite pam_pwquality.so retry=3 minlen=12 dcredit=-1 ucredit=-1 lcredit=-1 ocredit=-1 dcredit=-1 maxrepeat=3 enforce_for_root
+```
+
+`retry=3`:  Prompt three times invalid password before canceling.
+`minlen=10`: password must be at least 10 characters long
+`dcredit=-1`: It must contain an uppercase letter
+`ucredit=-1`: It must contain a lowercase letter
+`dcredit=-1`: It must contain a digit
+`maxrepeat=3`: it must not contain more than 3 consecutive identical character (for example `111` is not allowed)
+
+``
+``
