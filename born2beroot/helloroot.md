@@ -164,8 +164,8 @@ setfont /usr/share/consolefonts/Lat7-Terminus28x14.psf
 
 ![](https://i.imgur.com/qGpYVAI.png)
 
-[READ: hi root](https://www.clrn.org/what-is-root-linux/)
-[READ: Create new user](https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/)
+- [READ: hi root](https://www.clrn.org/what-is-root-linux/)
+- [READ: Create new user](https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/)
 
 Install the `sudo` utility, which allows executing single commands with superuser or alternative user privileges. Unlike logging in as root and performing all actions with unrestricted access, `sudo` provides a more secure approach.
 
@@ -301,8 +301,6 @@ ssh aljbari@127.0.0.2
 
 ![](https://c.tenor.com/SjlVZ624hncAAAAC/tenor.gif)
 
-**Task**: Instead of authenticating with your password, set up a ssh key in you VM and connect using the public and private key  :)
-
 __Warning__: It essential to prevent connecting with ssh to VM using `root` user, you have to configure your machine to completely disable `root` login.
 
 ### Disabling Root Login
@@ -318,6 +316,11 @@ Inside, search for a directive called `PermitRootLogin`. If it is commented, un
 ```
 PermitRootLogin no
 ```
+
+**Task**: Instead of authenticating with your password, set up a ssh key in you VM and connect using the public and private key  :)
+
+![](https://media.makeameme.org/created/i-dont-know-5b79c0.jpg)
+
 ## hostname
 
 [READ: How to change hostname on Linux](https://linuxconfig.org/how-to-change-hostname-on-linux)
@@ -333,6 +336,7 @@ cat /etc/hostname
 # Set the hostname of the computer:
 sudo hostnamectl set-hostname "alien-lab"
 ```
+
 
 ## Passwords policies
 
