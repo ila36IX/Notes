@@ -245,19 +245,22 @@ sudo service ssh restart
 
 In this point you've played a bit with  `IP` address and port `4242`, you need to know what those are, [Watch: you don't have to watch it all](https://youtu.be/3b_TAYtzuho?si=Q4lDxvkqUtwpdIip)
 
-If you watch the video above you'll learn about TCP, and for you information SSH is using that protocol to establish the connection, so for short you're using the IP and the port because the are essential parts for TCP (that thing that makes connection possible) to work.
+If you watch the video above you'll learn about TCP, and for your information SSH is using that protocol to establish the connection, so for short you're using the IP and the port because they are essential parts for TCP (that thing that makes connection possible) to work.
 
-New let's connect  to our server:
-
-`localhost` is a special IP address that routes network requests back to your own machine, effectively telling the protocol to communicate within the same computer rather than across a network.
+Q: what is the default port used by the ssh?
+### localhost?
 
 ![](https://images.hdqwalls.com/download/there-is-no-place-like-localhost-f9-3840x2160.jpg)
 
-You hopefully know by now that SSH is a network protocol for remote command execution. For learning purposes, we'll simulate connecting to a VM using the loopback IP `127.0.0.2`, which in real scenarios would be replaced with the actual remote machine's IP address.
+`localhost` is a special IP address that routes network requests back to your own machine, effectively telling the protocol to communicate within the same computer rather than across a network.
 
-There some kind of service that are running on localhost (`127.0.0.1`),  so will need to change the IP to `127.0.0.2`, and that will be the trick.
+You hopefully know by now that SSH is a network protocol for remote command execution. 
 
->Note: we'll not use `localhost` in this case, because it's a special host the refer exactly to the `127.0.0.1`, how did I know this? easy just have a look to the following file:
+For learning purposes, we'll simulate connecting to a VM using the loopback IP `127.0.0.2`, which in real scenarios would be replaced with the actual remote machine's IP address.
+
+There is some kind of service that are running on localhost (`127.0.0.1`),  so will need to change the IP to `127.0.0.2`, and that will be the trick.
+
+>Note: we'll not use `localhost` in this case, because it's a special host that refer exactly to the `127.0.0.1`, how did I know this? easy just have a look to the following file:
 
 ```sh
 $ cat /etc/hosts                                                                 
@@ -274,13 +277,16 @@ Q: How did you know that something is running in port `4242` on localhost?
 
 As I was saying, everything is isolated in your VM. Even if you installed SSH and made it running on port 4242, that doesn't mean anything to the host machine; nothing will be changed, so SSH will not run on the host machine.
 
-However, this isn't impossible. You just need to configure `VirtualBox` to make changes in the host and guest machines by going to `Settings/Network/Advanced/Port Forwarding`, and do those changes:
+However, this isn't impossible. You just need to configure `VirtualBox` to make changes in the host and guest machines by going to `Settings->Network->Advanced->Port Forwarding` (_I hope you like linke lists_), and do those changes:
 
 ![](https://i.imgur.com/2WZACTG.png)
 
 ![](https://i.imgur.com/GW0SjSX.png)
 
-####  Let's connect:
+---
+
+![](https://i.imgur.com/JHVfSSC.png)
+####  Let's connect...
 
 Haaaaaave you met `ssh` command?
 
@@ -288,14 +294,35 @@ Haaaaaave you met `ssh` command?
 
 ```sh
 ssh aljbari@127.0.0.2 -p 4242
+
+# what would heppend if?
+ssh aljbari@127.0.0.2 
 ```
 
 ![](https://c.tenor.com/SjlVZ624hncAAAAC/tenor.gif)
+
+**Task**: Instead of authenticating with your password, set up a ssh key in you VM and connect using the public and private key  :)
+
+__Warning__: It essential to prevent connecting with ssh to VM using `root` user, you have to configure your machine to completely disable `root` login.
+
+### Disabling Root Login
+
+To do this, open the SSH daemon configuration file with `root` or `sudo` on your VM:
+
+```sh
+sudo vim /etc/ssh/sshd_config
+```
+
+Inside, search for a directive called `PermitRootLogin`. If it is commented, uncomment it. Change the value to “no”:
+
+```
+PermitRootLogin no
+```
 ## hostname
 
 [READ: How to change hostname on Linux](https://linuxconfig.org/how-to-change-hostname-on-linux)
 
-hostname identify the device on a network.
+`hostname` identify the device on a network.
 
 ```sh
 # you can see yourhost name using on of those:
@@ -343,6 +370,7 @@ PASS_WARN_AGE 7
 - `PASS_MAX_DAYS 30`: Maximum number of days a password can be used before mandatory change (30 days)
 - `PASS_MIN_DAYS 2`: Minimum number of days between password changes (prevents frequent changes)
 - `PASS_WARN_AGE 7`: Number of days before password expiration that user receives warning (7 days)
+
 ## Password rules
 
 ![](https://images.hothardware.com/contentimages/newsitem/36056/content/Password_Meme.jpg)
