@@ -112,7 +112,7 @@ We'll focus on Debian because it's more stable and easier to setup and we are a 
 - What is Linux?
 #### appArmor
 
-[AppArmor](https://computingforgeeks.com/apparmor-cheat-sheet-for-linux-system-administrators/) is a system. It sets rules to restrict what files, directories, or system resources a program can access.
+[AppArmor](https://computingforgeeks.com/apparmor-cheat-sheet-for-linux-system-administrators/)  is a security module, It sets rules to restrict what files, directories, or system resources a program can access.
 
 To check if `appArmor` is running:
 
@@ -150,7 +150,9 @@ When a partition is **mounted** to a directory (e.g., `/home`), any files you ac
 - Boot process
 - GRUB bootloader
 
-## Directory Structure:
+## Directory Structure
+
+[Watch: Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)
 
 ![](https://i.pinimg.com/originals/f1/56/6a/f1566aef2c7fe30b37490f0ae02e817b.png)
 
@@ -207,14 +209,13 @@ Those are your friends: `groupadd`, `groupdel`, `groupmod`, `groups`.
 groups alien
 
 # Create a new group:
-sudo groupadd user42
+sudo groupadd aljbari42
 
 # Delete an existing group:
 sudo groupdel trash
 
 # Change the group name:
 sudo groupmod --new-name g61 g69
-
 ```
 
 **TASK**: Create the group "aliens" and create those users: "heatblast", "XLR7", "upgrade", all those users must belong to "aliens" group.
@@ -328,7 +329,7 @@ PermitRootLogin no
 `hostname` identify the device on a network.
 
 ```sh
-# you can see yourhost name using on of those:
+# you can see your host name using one of those:
 hostname
 hostnamectl
 cat /etc/hostname
@@ -388,69 +389,116 @@ To set password rules, you need first a simple program that will made that proce
 sudo apt install libpam-pwquality
 ```
 
+>`libpam-pwdquality` (library for password quality)
+
 Than change the file `/etc/pam.d/common-password` by adding the required policies.
 
 ```
-password requisite pam_pwquality.so retry=3 minlen=12 dcredit=-1 ucredit=-1 lcredit=-1 ocredit=-1 dcredit=-1 maxrepeat=3 enforce_for_root
+password requisite pam_pwquality.so retry=3 minlen=10 ucredit=-1 lcredit=-1 dcredit=-1 maxrepeat=3 enforce_for_root
+password requisite pam_pwquality.so difok=7
 ```
 
-`retry=3`:  Prompt three times invalid password before canceling.
-`minlen=10`: password must be at least 10 characters long
-`dcredit=-1`: It must contain an uppercase letter
-`ucredit=-1`: It must contain a lowercase letter
-`dcredit=-1`: It must contain a digit
-`maxrepeat=3`: it must not contain more than 3 consecutive identical character (for example `111` is not allowed)
+- `retry=3`:  Prompt three times invalid password before canceling.
+- `minlen=10`: password must be at least 10 characters long
+- `dcredit=-1`: It must contain an uppercase letter
+- `ucredit=-1`: It must contain a lowercase letter
+- `dcredit=-1`: It must contain a digit
+- `maxrepeat=3`: it must not contain more than 3 consecutive identical character (for example `111` is not allowed)
+- `difok=7`: The following rule does not apply to the root password (that way we have written it in it's isolated line): The password must have at least 7 characters that are not part of the former password. (if the old password is: "testing123" and the new one is "testing999" that should give error).
+
+## Strict rules for sudo
+
+Just edit the file `/etc/sudoers` and add the following:
+
+```
+# custom message of your choice has to be displayed if an error due to a wrong
+password occurs when using sudo
+Defaults	badpass_message="Not even close :)"
+
+# Each action using sudo has to be archived, both inputs and outputs. The log file has to be saved in the /var/log/sudo/ folder.
+Defaults	log_input
+Defaults	log_output
+Defaults	iolog_dir="/var/log/sudo"
+
+# The TTY mode has to be enabled for security reasons
+Defaults	requiretty
+
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+
+# Authentication using sudo has to be limited to 3 attempts in the event of an incorrect password.
+Defaults	passwd_tries=3
 
 
-## TODO:
+```
+### Steps to Enable TTY Mode for `sudo`
 
-- /boot
-- /var
-- /etc
-- /home
-- /dev
-- /proc
-- /sys
-- /tmp
-- /usr
+**TTY**: ensuring that the `sudo` command can only be executed in an interactive terminal (TTY). This is a security measure to prevent attackers from executing `sudo` commands in non-interactive sessions, such as through scripts or web interfaces.
 
-Networking:
+To enable it add the following line to the file `/etc/sudoers`
 
-- SSH
-- Network protocols
-- IP addressing
-- DNS
-- Ports
-- UFW (firewall)
+```
+Defaults	requiretty
+```
 
-User Management:
+## Sudo logs
 
-- Users and groups
-- Sudo privileges
-- Password policies
-- Authentication
+This the way too see all the commands executed by the root user:
 
-System Administration:
+```sh
+sudo sudoreplay -l -d /var/log/sudo/
+```
+## Installing WordPress
 
-- System logs
-- Cron jobs
-- System monitoring
-- Backup management
-- Package management (apt)
-- Service management (systemd)
+- [Watch: How to Run WordPress Locally](https://www.youtube.com/watch?v=PsMhopODLTY)
+- [READ: How to Install Lighttpd with PHP-FPM ](https://www.howtoforge.com/tutorial/how-to-install-lighttpd-with-php-fpm-and-mysql-on-ubuntu-2004/)
 
-Security:
+First of all we need to install the lighttpd web server:
 
-- SELinux/AppArmor
-- SSH key pairs
-- SSL/TLS
-- Firewall rules
-- Directory permissions
+```sh
+sudo apt install lighttpd -y
+```
+Todo: add more details later...
 
-Commands & Tools:
+## Making service working for every user
 
-- Basic shell commands
-- Text editors (vim/nano)
-- Monitoring tools (top, htop)
-- Disk tools (fdisk, parted)
-- Networking tools (netstat, ss)``
+To make the service run every 10 minute you'll have to use a service called `cron`.
+It should be running by default in  your machine:
+
+```sh
+sudo systemctl status cron
+```
+
+After you verify that you have this service installed, now switch to root user to schedule task every 10 minutes:
+
+```sh
+su 
+crontab -e
+```
+ 
+and add the following line:
+ 
+ ```
+ */10 * * * * /path/to/monitoring.sh
+ ```
+
+Avoid using `~/monitoring.sh` but use the absolute path like the following:
+
+```
+*/10 * * * * /home/aljbari/monitoring.sh
+```
+
+![](https://i.imgur.com/WUkFGlZ.png)
+
+Q1: What is `cron`?
+-  Linux program that allows users to schedule the execution of a piece of software, for example I need the machine to reboot every Friday, this is easy using cron.
+
+Q2: What `*/10 * * * * `... mean? 
+
+> Start here: [Play](https://crontab.guru/) 
+
+
+## Monitoring
+
+![](https://i.imgur.com/fECZlk4.png)
+
+I wouldn't give you the chance to c/p :)
