@@ -255,7 +255,10 @@ sudo vim /etc/ssh/sshd_config
 sudo service ssh restart
 ```
 
-In this point you've played a bit with  `IP` address and port `4242`, you need to know what those are, [Watch: OSI and TCP IP Models - Best Explanation](https://youtu.be/3b_TAYtzuho?si=Q4lDxvkqUtwpdIip)(you don't have to watch it all).
+In this point you've played a bit with  `IP` address and port `4242`, you need to know what those are:
+
+- [Watch: Port Numbers Explained](https://www.youtube.com/watch?v=RDotMcs0Erg)
+- [Watch: IP Addresses Explained](https://www.youtube.com/watch?v=LIzTo6e4FgY)
 
 If you watch the video above you'll learn about TCP, and for your information SSH is using that protocol to establish the connection, so for short you're using the IP and the port because they are essential parts for TCP (that thing that makes connection possible) to work.
 
