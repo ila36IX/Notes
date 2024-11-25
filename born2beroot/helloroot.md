@@ -506,14 +506,23 @@ I wouldn't give you the chance to c/p :)
 
 ## Installing WordPress
 
-- [Watch: How to Run WordPress Locally](https://www.youtube.com/watch?v=PsMhopODLTY)
-- [READ: How to Install Lighttpd with PHP-FPM ](https://www.howtoforge.com/tutorial/how-to-install-lighttpd-with-php-fpm-and-mysql-on-ubuntu-2004/)
 
 First of all we need to install the lighttpd web server:
 
+**Note**: in this article the `php7.4` is configured, please change `7.4` with the current version you have, in commands, for example:
+
 ```sh
-sudo apt install lighttpd -y
+# Instead of:
+cd /etc/php/7.4/fpm/
+
+# Change the version: (8.2) is an example you have to find your version
+cd /etc/php/8.2/fpm/
 ```
 
-Todo: add more details later...
+- [READ: How to Install Lighttpd with PHP-FPM ](https://www.howtoforge.com/tutorial/how-to-install-lighttpd-with-php-fpm-and-mysql-on-ubuntu-2004/)
+
+Now after installing `lighttpd` and `mysql` and `php`, let's install the WordPress:
+
+- [Watch: How to Run WordPress Locally (start from 3:30)](https://www.youtube.com/watch?v=PsMhopODLTY)
+
 
