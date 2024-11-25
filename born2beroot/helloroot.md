@@ -523,6 +523,6 @@ cd /etc/php/8.2/fpm/
 
 Now after installing `lighttpd` and `mysql` and `php`, let's install the WordPress:
 
-- [Watch: How to Run WordPress Locally (start from 3:30)](https://www.youtube.com/watch?v=PsMhopODLTY)
+- [Watch: How to Run WordPress Locally (start from 2:15)](https://youtu.be/PsMhopODLTY?si=cA9k_4cYFCIjGK2w&t=136)
 
 
