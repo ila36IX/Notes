@@ -32,7 +32,7 @@ Good now we have a good understanding of what a VM is, so let us create one, fir
 
 ![](https://i.imgur.com/LqQxxtt.png)
 
-[⏯ Watch](https://youtu.be/wX75Z-4MEoM?si=gk-KOOuULc96tl0Q)
+[Watch: you need to learn Virtual Machines](https://youtu.be/wX75Z-4MEoM?si=gk-KOOuULc96tl0Q)
 
 Now by installing the `virtualBox`, it's like we have the virtual hardware, what do you think we still need? yes we need an OS (operating system), like Linux the 🐐, but what is Linux?
 
@@ -92,11 +92,9 @@ Here's a list of some key [differences](https://amadla.medium.com/debian-linux-v
 | **Package Manager**   | `apt`                                   | `dnf` \|\| `yum`                         |
 | **Base Distribution** | Independent                             | Based on Red Hat Enterprise Linux (RHEL) |
 | **Release Model**     | Stable releases                         | Rolling release model                    |
-| **Long-term Support** | Yes                                     | Yes                                      |
-| **Default DE**        | Various (e.g., GNOME, KDE)              | GNOME                                    |
-| **Community Support** | Strong                                  | Strong                                   |
 | **LSM**               | appArmor                                | SELinux                                  |
 | **User Interface**    | Can be minimalistic or full-featured    | Typically full-featured                  |
+
 
 #### Why Choose Debian Over Rocky Linux?
 
@@ -112,6 +110,8 @@ We'll focus on Debian because it's more stable and easier to setup and we are a 
 - What is Linux?
 #### appArmor
 
+[Watch: Hello world in Application armor (only this first 3min)](https://www.youtube.com/watch?v=Uq1d60TLebE)
+
 [AppArmor](https://computingforgeeks.com/apparmor-cheat-sheet-for-linux-system-administrators/)  is a security module, It sets rules to restrict what files, directories, or system resources a program can access.
 
 To check if `appArmor` is running:
@@ -123,6 +123,8 @@ sudo systemctl status apparmor
 
 ## Partitioning
 
+[Watch: Installation and partitioning](https://www.youtube.com/watch?v=jxReupv7UOo)
+
 __File system:__ Is data structure that an operating system uses to manage files on a disk or partition, for example: 
 
 - **Ext4** – is a file system Created for Linux-based systems. Includes major improvements over ext3 such as support for large volumes and files. Provides faster disk checks and fragmentation avoidance.
@@ -132,11 +134,14 @@ __File system:__ Is data structure that an operating system uses to manage files
 __Primary Partition:__ This is a primary division of the hard drive that can host an operating system. You can have up to four primary partitions on a single drive, it can be made "bootable", meaning the system can start from them.
 
 __Logical Partition:__ subdivision within an extended partition that can be used to store data or install operating systems, it is usually not bootable. They reside within an extended partition.
-### Logical Volumes vs Logical Partitions
 
-[READ](https://medium.com/@ahmedmansouri/understanding-disk-partitioning-in-linux-logical-volumes-vs-logical-partitions-796d46587d64)
+## LVM
 
 ![](https://contabo.com/blog/wp-content/uploads/2023/03/image.png)
+
+- [Watch: Introduction to LVM](https://www.youtube.com/watch?v=dMHFArkANP8)
+- [READ: Guide to LVM in Linux](https://linuxhandbook.com/lvm-guide/)
+- [READ: Understanding Disk Partitioning in Linux](https://medium.com/@ahmedmansouri/understanding-disk-partitioning-in-linux-logical-volumes-vs-logical-partitions-796d46587d64)
 
 ### How Mounting Works?
 
@@ -144,6 +149,8 @@ __Logical Partition:__ subdivision within an extended partition that can be used
 When a partition is **mounted** to a directory (e.g., `/home`), any files you access in `/home` are actually stored on that separate partition, not on the root partition.
 
 > `/home` is **logically inside the root directory** and **physically resides** on a completely different storage space.
+
+Q: Give a short description of what the following means in brief?
 
 - Partition tables (MBR vs GPT)
 - Swap space
@@ -158,6 +165,8 @@ When a partition is **mounted** to a directory (e.g., `/home`), any files you ac
 
 ## Change default font
 
+After installing you VM, you can change the font by running the following:
+
 ```
 setfont /usr/share/consolefonts/Lat7-Terminus28x14.psf
 ```
@@ -166,16 +175,17 @@ setfont /usr/share/consolefonts/Lat7-Terminus28x14.psf
 
 ![](https://i.imgur.com/qGpYVAI.png)
 
-- [READ: hi root](https://www.clrn.org/what-is-root-linux/)
+- [READ: What is root Linux?](https://www.clrn.org/what-is-root-linux/)
 - [READ: Create new user](https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/)
+- [READ: How To Create A New Sudo Enabled User](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu)
 
 Install the `sudo` utility, which allows executing single commands with superuser or alternative user privileges. Unlike logging in as root and performing all actions with unrestricted access, `sudo` provides a more secure approach.
 
 Q: If `sudo` command is just to run command as `root` user, why don't we just log-in as root and do everything we need freely? "I'll let finding out why to you!"
 
 You need to have two users in your created machine:
-- root (It should be exists by default)
-- aljbari (your user name)
+- `root` (It should be exists by default)
+- `aljbari` (your user name)
 ### How?
 
 `useradd`: Create a new user.
@@ -209,7 +219,7 @@ Those are your friends: `groupadd`, `groupdel`, `groupmod`, `groups`.
 groups alien
 
 # Create a new group:
-sudo groupadd aljbari42
+sudo groupadd user42
 
 # Delete an existing group:
 sudo groupdel trash
@@ -231,6 +241,7 @@ sudo groupmod --new-name g61 g69
 - [Watch: SSH crash course](https://www.youtube.com/watch?v=hQWRp-FdTpc)
 - [Watch: SSH keys](https://www.youtube.com/watch?v=dPAw4opzN9g)
 - [READ: You have to know what is RSA in brief](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- [Watch: How to Encrypt with RSA](https://www.youtube.com/watch?v=wcbH4t5SJpg)
 
 ```sh
 # install ssh server
@@ -244,7 +255,7 @@ sudo vim /etc/ssh/sshd_config
 sudo service ssh restart
 ```
 
-In this point you've played a bit with  `IP` address and port `4242`, you need to know what those are, [Watch: you don't have to watch it all](https://youtu.be/3b_TAYtzuho?si=Q4lDxvkqUtwpdIip)
+In this point you've played a bit with  `IP` address and port `4242`, you need to know what those are, [Watch: OSI and TCP IP Models - Best Explanation](https://youtu.be/3b_TAYtzuho?si=Q4lDxvkqUtwpdIip)(you don't have to watch it all).
 
 If you watch the video above you'll learn about TCP, and for your information SSH is using that protocol to establish the connection, so for short you're using the IP and the port because they are essential parts for TCP (that thing that makes connection possible) to work.
 
@@ -270,7 +281,7 @@ $ cat /etc/hosts
 # more text here...
 ```
 
-As you can see using __localhost__ we'll make you use `127.0.0.1`, there is something running in that particular IP on port 4242, so let's use `127.0.0.2` the next available IP.
+As you can see using __localhost__ we'll make you use `127.0.0.1`, there is something running in that particular IP on port 4242, so let's use `127.0.0.2`: the next available IP.
 
 Q: How did you know that something is running in port `4242` on localhost?
 
@@ -278,7 +289,7 @@ Q: How did you know that something is running in port `4242` on localhost?
 
 As I was saying, everything is isolated in your VM. Even if you installed SSH and made it running on port 4242, that doesn't mean anything to the host machine; nothing will be changed, so SSH will not run on the host machine.
 
-However, this isn't impossible. You just need to configure `VirtualBox` to make changes in the host and guest machines by going to `Settings->Network->Advanced->Port Forwarding` (_I hope you like linke lists_), and do those changes:
+However, this isn't impossible. You just need to configure `VirtualBox` to make changes in the host and guest machines by going to `Settings->Network->Advanced->Port Forwarding` (_I hope you like linked lists_), and do those changes:
 
 ![](https://i.imgur.com/2WZACTG.png)
 
@@ -406,6 +417,7 @@ password requisite pam_pwquality.so difok=7
 - `maxrepeat=3`: it must not contain more than 3 consecutive identical character (for example `111` is not allowed)
 - `difok=7`: The following rule does not apply to the root password (that way we have written it in it's isolated line): The password must have at least 7 characters that are not part of the former password. (if the old password is: "testing123" and the new one is "testing999" that should give error).
 
+Q: Create a new user and try to change its password, by making it less that 10 characters, or doesn't contain a lower case character, did it work?
 ## Strict rules for sudo
 
 Just edit the file `/etc/sudoers` and add the following:
@@ -427,9 +439,8 @@ Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 
 # Authentication using sudo has to be limited to 3 attempts in the event of an incorrect password.
 Defaults	passwd_tries=3
-
-
 ```
+
 ### Steps to Enable TTY Mode for `sudo`
 
 **TTY**: ensuring that the `sudo` command can only be executed in an interactive terminal (TTY). This is a security measure to prevent attackers from executing `sudo` commands in non-interactive sessions, such as through scripts or web interfaces.
@@ -442,22 +453,11 @@ Defaults	requiretty
 
 ## Sudo logs
 
-This the way too see all the commands executed by the root user:
+This the way too see all the commands executed by the root user, that will only work if you did the above configuration:
 
 ```sh
 sudo sudoreplay -l -d /var/log/sudo/
 ```
-## Installing WordPress
-
-- [Watch: How to Run WordPress Locally](https://www.youtube.com/watch?v=PsMhopODLTY)
-- [READ: How to Install Lighttpd with PHP-FPM ](https://www.howtoforge.com/tutorial/how-to-install-lighttpd-with-php-fpm-and-mysql-on-ubuntu-2004/)
-
-First of all we need to install the lighttpd web server:
-
-```sh
-sudo apt install lighttpd -y
-```
-Todo: add more details later...
 
 ## Making service working for every user
 
@@ -495,10 +495,22 @@ Q1: What is `cron`?
 Q2: What `*/10 * * * * `... mean? 
 
 > Start here: [Play](https://crontab.guru/) 
-
-
 ## Monitoring
 
 ![](https://i.imgur.com/fECZlk4.png)
 
 I wouldn't give you the chance to c/p :)
+
+## Installing WordPress
+
+- [Watch: How to Run WordPress Locally](https://www.youtube.com/watch?v=PsMhopODLTY)
+- [READ: How to Install Lighttpd with PHP-FPM ](https://www.howtoforge.com/tutorial/how-to-install-lighttpd-with-php-fpm-and-mysql-on-ubuntu-2004/)
+
+First of all we need to install the lighttpd web server:
+
+```sh
+sudo apt install lighttpd -y
+```
+
+Todo: add more details later...
+
