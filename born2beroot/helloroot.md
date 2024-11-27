@@ -232,6 +232,10 @@ sudo groupmod --new-name g61 g69
 - Make "XLR7" a superuser
 - I made a typo, please rename the user "XLR7" to "XLR8"
 
+<p align = "center">
+		<img src = "https://media.tenor.com/svkW47X_XAcAAAAM/xlr8.gif">
+</p>
+
 ![](https://media.tenor.com/svkW47X_XAcAAAAM/xlr8.gif)
 
 ## ssh
