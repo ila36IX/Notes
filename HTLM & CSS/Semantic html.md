@@ -23,6 +23,30 @@
 </div>
 ```
 
+## `section`
+
+![](https://i.imgur.com/a8GfFPk.png)
+
+```html
+<div class="card">
+  <section class="card__info">
+    <header class="card__head">
+      <img class="card__head--img" alt="" src="" width="100px" />
+      <h3 class="card__head--fullName"></h3>
+      <span class="card__head--address"></span>
+      <span class="card__head--desc"></span>
+    </header>
+  </section>
+  <section class="card__menu">
+    <nav class="menu__links">
+      <a class="menu__link"></a>
+      <a class="menu__link"></a>
+      <a class="menu__link"></a>
+    </nav>
+  </section>
+</div>
+```
+
 # Semantic layout
 
 ![](https://static.semrush.com/blog/uploads/media/cc/85/cc85d452a743e27f68d426df35e4da7d/EN-Semantic-Search-Non-Semantic.webp)
