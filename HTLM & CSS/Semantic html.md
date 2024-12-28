@@ -12,7 +12,7 @@
 				<span class="twitterCard__userName"></span>
 			</figcaption>
 		</figure>
-			<img class="twitterCard__brand" src="twitter-logo.png" />
+		<img class="twitterCard__brand" src="twitter-logo.png" />
 	</header>
 	<blockquote class="twitterCard__content">
 		<p>
