@@ -139,3 +139,104 @@ int main() {
     return 0;
 }
 ```
+
+## You probably do not know `SEGV` well
+
+Ever had your code crash with a segfault and thought "Oh great, the system's angry at me again"? Well, it turns out that is just the default behavior of your program, that makes you believe in that, you can easily  get a segfault and make your code still running!
+
+### What's Really Happening?
+
+The reason why the code segFault is when the kernel spots unauthorized memory access to a memory, in order to communicate that to your process (remember what signal is? _a way to communicate between processes_) the kernel sends a `SEGV` to you program.
+
+> signals are just the kernel's way of sliding into your program's DMs :)
+
+![Imgur](https://i.imgur.com/tEkftxm.png)
+
+### Taking Control of Signals
+
+Almost every signal in your system can be caught and handled - yes, even those scary ones like:
+- `SIGBUS` (bad memory access)
+- `SIGFPE` (floating point exception)
+- `SIGILL` (illegal instruction)
+- `SIGSEGV` (segmentation violation)
+### The Untouchables
+
+However, there are two rebellious signals that refuse to be tamed:
+
+1. `SIGKILL (9)`: The ultimate terminator - cannot be caught, blocked, or ignored
+2. `SIGSTOP`: The freeze ray - suspends execution and won't take no for an answer
+
+> `SIGKILL` are the serious side of the kernel
+
+### Lets say Hi to a segFault
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+
+/**
+ *
+ * Example of how to handle a SEGV, and make the program
+ * behiave in a different way
+ */
+void segfaultHandler(int sig)
+{
+	printf("Signals every where\n");
+	exit(1); // Exit the program
+}
+
+int main()
+{
+	// Register the signal handler for SIGSEGV
+	signal(SIGSEGV, segfaultHandler);
+	printf("Hello SEGV!\n");
+
+	int *ptr = NULL;
+	// unauthorized memory access 
+	*ptr = 42;
+}
+```
+
+Now Let's have some more fun, how about segfaulting a random running program?
+
+```c
+// main.c
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+{
+	// print the PID of the process
+	printf("PID: %d\n", getpid());
+	// Stops the process untill it recives a signal
+	pause();
+	return 0;
+}
+```
+
+```sh
+gcc main.c -o run && ./run
+PID: 271354
+# the program will keep excuting
+```
+
+In other terminal:
+
+```bash
+kill -SEGV 271354
+```
+
+See? you program got the following:
+
+![Imgur](https://i.imgur.com/iWpeCbl.png)
+
+## My implementation in short
+
+My idea was to send signals `SIGUSR1` and `SIGUSR2` to represent `1` and `0`. It worked in some cases but failed in others. There is always a possibility of losing a signal, which makes the rest of the payload meaningless. Why?
+
+Linux systems do NOT queue signals when you already have pending signals of the same type!
+
+So, I tried using a bigger delay between sending signals. That reduced the chance of losing signals but caused a massive performance issue. Increasing the delay made sending larger messages possible but very slow (e.g., it took more than `10s` to send just 1600 characters).
+
+That was not the solution. The next idea was to send each bit and wait for the server to acknowledge receiving it. This approach did the trick and, surprisingly, was more performant than I expected—it allowed me to send 16,000 characters in just 1 second.
