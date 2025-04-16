@@ -108,16 +108,6 @@ The `abolute` position is making by default the element to be relative to the wh
 ```
 
 
-## Background image tips
-
-```css
-background-image: url(<link_to_image>);
-background-color: #fff;
-background-size: cover, demantions-of-image;
-background-postion: center center;
-background-repeat: no-repeat;
-```
-
 ### Box shadow
 
 ```css

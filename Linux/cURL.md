@@ -28,3 +28,26 @@ curl -sI getaline.com
 -X PUT
 ```
 
+Send HEAD request (only prints response headers):
+
+```sh
+curl -I https://www.inlanefreight.com 
+```
+
+Set request header:
+
+```sh
+curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' http://<SERVER_IP>:<PORT>
+```
+
+Set request cookies:
+
+```sh
+curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://url
+```
+
+Send POST request with `JSON` data:
+
+```sh
+curl -X POST -d '{"search":"london"}' -H 'ContentType: application/json' http://url
+```
