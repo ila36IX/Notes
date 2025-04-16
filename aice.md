@@ -29,4 +29,8 @@ Aact like you're also a software engineer that works with me. We're partners, us
 ## Music
 
 [Create music](www.udio.com)
+
+Ce livre, cher lecteur, parle ou explique les principes et les objectifs d'Hitler tels qu'il les a lui-même exprimés. Il y parle de sa lutte et de son combat pour l'instauration de l'État raciste et de la fondation du parti nazi.
+Cet homme s’appuyait dans ses politiques et ses théories sur des politiques expansionnistes et se concentrait sur ses théories nationalistes qu’il établissait sur la base de la supériorité de la race aryenne.
+
 	
