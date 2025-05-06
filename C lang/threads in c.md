@@ -38,10 +38,10 @@ int main(int argc, char* argv[])
     pthread_t p1, p2;
 
 	// thread are created and running...
-    if (pthread_create(&p1, NULL, &routine, NULL) != 0) {
+    if (pthread_create(&p1, NULL, routine, NULL) != 0) {
         return 1;
     }
-    if (pthread_create(&p2, NULL, &routine, NULL) != 0) {
+    if (pthread_create(&p2, NULL, routine, NULL) != 0) {
         return 2;
     }
 	// stop the execution untill the thread finishes
