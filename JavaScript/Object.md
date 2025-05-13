@@ -19,4 +19,5 @@ let newArray = oldArray.slice();
 ```js
 Object.keys(obj);
 Object.values(obj);
+Object.entries(obj)
 ```
