@@ -13,6 +13,7 @@
   - Useful for dynamically adding attributes during runtime.
 
 - **Example:**
+
   ```python
   setattr(obj, 'new_attribute', 42)
   ```
