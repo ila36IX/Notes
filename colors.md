@@ -4,4 +4,3 @@
 - secondary-dark (blue-dark): `#23232c`
 - white: `#ebebec`
 - white-light: `#ebebec`
-- testing

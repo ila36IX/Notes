@@ -20,37 +20,34 @@ In Python, classes are used to create objects. A class can have both class attri
 - **Class Attributes:** These attributes are shared by all instances of the class. They are defined inside the class but outside any class method.
   
   ```python
-  class MyClass:
-      class_attribute = "I am a class attribute"
+class MyClass:
+	class_attribute = "I am a class attribute"
   ```
 
 - **Instance Attributes:** These attributes are specific to each instance of the class. They are defined inside the class methods using the `self` keyword.
-  
-  ```python
-  class MyClass:
-      def __init__(self, instance_attribute):
-          self.instance_attribute = instance_attribute
-  ```
 
+```python
+class MyClass:
+	def __init__(self, instance_attribute):
+		self.instance_attribute = instance_attribute
+```
 ## 3. Properties vs. Getters and Setters
 
 In Python, properties, getters, and setters are techniques to control the access and modification of class attributes.
 
 - **Properties:** Properties allow you to define getter, setter, and deleter methods using the `@property`, `@<attribute>.setter`, and `@<attribute>.deleter` decorators, respectively.
 
-  ```python
-  class MyClass:
-      def __init__(self, value):
-          self._value = value
-
-      @property
-      def value(self):
-          return self._value
-
-      @value.setter
-      def value(self, new_value):
-          self._value = new_value
-  ```
+```python
+class MyClass:
+	def __init__(self, value):
+		self._value = value
+	@property
+	def value(self):
+		return self._valu
+    @value.setter
+    def value(self, new_value):
+        self._value = new_value
+```
 
 - **Getters and Setters:** Getters and setters are traditional methods used for accessing and modifying attributes. They provide more control over attribute behavior.
 

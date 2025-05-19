@@ -19,7 +19,6 @@ When a system call fails, it sets the global integer variable `errno` to a posit
 that identifies the specific error.
 
 > `#include <stdio.h>`
-> 
 > `void perror(const char *msg);`
 
 Simple usage:
@@ -37,7 +36,6 @@ The strerror() function returns the error string corresponding to the error numb
 given in its errnum argument.
 
 > `#include <string.h>`
->
 > `char *strerror(int errnum);`
 > Returns pointer to error string corresponding to errnum
 
