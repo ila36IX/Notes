@@ -13,12 +13,16 @@
 - [Tutorial - Write a Shell in C • Stephen Brennan](https://brennan.io/2015/01/16/write-a-shell-in-c/)
 
 
+- [Harvard: shell grammar](https://cs61.seas.harvard.edu/site/2021/Shell/#shell-grammar)
+
+
+## 1. Lex
 
 To create the shell, first we'll have to use a technique called __lexical analysis__ which  is the process of taking the raw input string `"ls -l /home"` and breaking it down into these meaningful `(token-type, token-value)` pairs.
 
 Each of these pairs `(COMMAND, "ls")`, `(OPTION, "-l")`, and `(PATH, "/home")` – is a **lexical token**.
 
-__Lexical analysis__: breaking the input into individual words or __“tokens”__;
+[__Lexical analysis__](https://www.youtube.com/watch?v=sJKFLcsysVs): breaking the input into individual words or __“tokens”__;
 __Syntax analysis__: parsing the phrase structure of the program;
 __Semantic analysis__: calculating the inputl;
 
@@ -52,3 +56,69 @@ cat << EOF > file | wc -c | tr -d " " > file2
                                                              file2
 ```
 
+
+Symbol table:
+
+| lexem                                           | Token class      |     |
+| ----------------------------------------------- | ---------------- | --- |
+| \|                                              | PIPE             |     |
+| `>>`, `<<`,`>`.`<`                              | REDIRECTION      |     |
+| `"Testing"`                                     | SINGLE_QUOTE_STR |     |
+| `testing`                                       | DOUBLE_QUOTE_STR |     |
+| `echo`,`cd`,`pwd`,`export`,`unset`,`env`,`exit` | KEYWORD          |     |
+| word                                            | `abcdef`         |     |
+
+quote 
+
+
+```
+$ echo testing > b is everything > c
+$ cat b
+testing is everything
+$ cat c
+testing is everything
+```
+
+```bash
+|
+||
+&&
+>> 
+>
+<
+<<
+"xxxx"
+'xxxxx'
+$xxxx
+$?
+echo
+cd
+pwd
+export
+unset
+env
+exit
+*
+```
+
+```txt
+commandline ::= (empty)
+          |  conditional
+          |  conditional ";" commandline
+          |  conditional "&" commandline
+
+conditional ::=  pipeline
+          |   conditional "&&" pipeline
+          |   conditional "||" pipeline
+
+pipeline ::=  command
+          |   pipeline "|" command
+
+command  ::=  word
+          |   redirection
+          |   command word
+          |   command redirection
+
+redirection  ::=  redirectionop filename
+redirectionop  ::=  "<"  |  ">"  |  ">>" | "<<"
+```
