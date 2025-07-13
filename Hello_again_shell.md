@@ -12,7 +12,6 @@
 - [Abstract syntax tree - Wikipedia](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 - [Tutorial - Write a Shell in C • Stephen Brennan](https://brennan.io/2015/01/16/write-a-shell-in-c/)
 
-
 - [Harvard: shell grammar](https://cs61.seas.harvard.edu/site/2021/Shell/#shell-grammar)
 
 
@@ -57,7 +56,7 @@ cat << EOF > file | wc -c | tr -d " " > file2
 ```
 
 
-Symbol table:
+## Symbol table
 
 | lexem                                           | Token class      |     |
 | ----------------------------------------------- | ---------------- | --- |

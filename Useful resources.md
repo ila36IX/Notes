@@ -1,8 +1,9 @@
 
+## Articles
+
 - [Video about CORS](https://www.youtube.com/watch?v=Ka8vG5miErk)
 - [Web Architecture 101](https://medium.com/storyblocks-engineering/web-architecture-101-a3224e126947)
 - [I fought a DDoS and lived to tell the story](https://funkbytetech.substack.com/p/i-fought-a-ddos-and-lived-to-tell)
-
 
 ## Algorithm Courses
 
@@ -14,19 +15,19 @@
 
 
 ## Java
-[Java Concurrency in Practice](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
+- [Java Concurrency in Practice](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
 
 ## System design patterns
 
-[learn with practical examples DP](https://refactoring.guru/design-patterns)
+- [learn with practical examples DP](https://refactoring.guru/design-patterns)
 
 ## UI system design
 
-[Google’s component library (GitHub)](https://github.com/material-components/material-web/blob/main/docs/intro.md)
-[Google's system design](https://m3.material.io/get-started)
-[Cisco design gives guide](https://momentum.design/)
-[Microsoft design system](https://fluent2.microsoft.design/)
-[Tailwind components](https://catalyst-demo.tailwindui.com/events)
+- [Google’s component library (GitHub)](https://github.com/material-components/material-web/blob/main/docs/intro.md)
+- [Google's system design](https://m3.material.io/get-started)
+- [Cisco design gives guide](https://momentum.design/)
+- [Microsoft design system](https://fluent2.microsoft.design/)
+- [Tailwind components](https://catalyst-demo.tailwindui.com/events)
 ## Design inspiration
 
 - [Mobbin](https://mobbin.com/)
