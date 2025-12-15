@@ -1,18 +1,15 @@
 # The access layer
 
+![](https://i.imgur.com/ybKCyRG.png)
+
 Ethernet is technology commonly used in local area networks. Devices access the Ethernet LAN using an Ethernet Network Interface Card (NIC). Each Ethernet NIC has a unique address permanently embedded on the card known as a Media Access Control (MAC) address. The MAC address for both the source and destination are fields in an Ethernet frame.
 
 Ethernet operates at layer 2, the data link layer, of the OSI model.
-## Frame
+## Ethernet Frame
 
-![](https://i.imgur.com/cPulM0R.png)
+![](https://i.imgur.com/EMG0Ya2.png)
 
 Each computer message is encapsulated in a specific format, called a **frame**, before it is sent over the network. A frame acts like an envelope; it provides the address of the intended destination and the address of the source host.
-
-## Encapsulation
-
-The process of placing one message format (the letter) inside another message format (the envelope) is called **encapsulation**. 
-**De-encapsulation** occurs when the process is reversed by the recipient and the letter is removed from the envelope.
 
 ### Ethernet Switches and the table of MAC addresses
 

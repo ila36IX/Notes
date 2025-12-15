@@ -14,7 +14,7 @@ if (!Number(argv[2])) {
 
 ## File system
 
-The `fs` module of Node.js implements the File I/O operation:
+The `fs` module of `Node.js` implements the File I/O operation:
 
 ```js
 const fs = require("fs");
@@ -74,4 +74,4 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-you can use the `fs` for dealing with files. [more info](https://geekflare.com/handling-files-in-javascript/)
+You can use the `fs` for dealing with files. [more info](https://geekflare.com/handling-files-in-javascript/)

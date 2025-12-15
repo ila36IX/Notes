@@ -38,4 +38,4 @@ Ranks servers based on connection count and response time.
 Utilizes the ranking method of Observed but considers trends in server performance over time.
 Favors servers with improving performance.
 
-[More informations ⇾](https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-the-algorithms/ta-p/273759)
+[More information ⇾](https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-the-algorithms/ta-p/273759)
