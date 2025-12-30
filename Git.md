@@ -1,4 +1,11 @@
 
+### Merge Squash
+
+ Takes all changes from a feature branch and condenses them into a single new commit on the target branch, rather than preserving the entire history of the feature branch. 
+
+```shell
+git merge --squash other-branch
+```
 ### Replace files between branches
 
 To replace the `Makefile` with `makefile` version in main you can the the following:

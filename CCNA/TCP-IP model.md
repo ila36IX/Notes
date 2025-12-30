@@ -1,8 +1,10 @@
-
+#Networking
 
 ![](https://i.imgur.com/rJ1Z7wS.png)
 
 ##  The Physical Layer (Layer 1)
+
+[[The Physical Layer]]
 
 Sends and receives bits as electrical, optical, or radio signals over the medium. Defines things like cables, connectors, signal levels, and link speeds. 
 
@@ -14,7 +16,7 @@ The physical aspects of transmitting data are very complex. Network engineers ty
 
 ## The Local Network layer or Access Layer or Data Link layer (Layer 2)
 
-[[The access layer]]
+[[The Access Layer]]
 
 ![](https://i.imgur.com/HNJPPcv.png)
 
@@ -28,6 +30,8 @@ Uses MAC (Media Access Control) addresses to identify interfaces.
 - Wi-Fi (IEEE 802.11)
 
 ## The Internet layer (Layer 3)
+
+[[The Network Layer]]
 
 Provides end-to-end delivery between hosts across multiple networks.
 
@@ -64,6 +68,7 @@ The message moves down the stack, each layer encapsulate the data with a header 
 
 The decapsulation happens in the reverse order.
 
+![](https://i.imgur.com/vsVdoOH.png)
 ## PDU
 
 Protocol Data Unit (PDU) is standardized block of information, or a "container," carrying user data and protocol-specific control information (like headers/trailers) for communication between peer layers in a computer network

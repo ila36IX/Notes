@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"c80ae8e02fc5a08c","type":"file","file":"CCNA/TCP-IP model.md","x":-700,"y":-180,"width":400,"height":400},
+		{"id":"f6d2c28aa8a3a347","type":"text","text":"","x":1107,"y":185,"width":250,"height":60},
+		{"id":"66e0238037dbd98f","type":"file","file":"CCNA/The Access Layer.md","x":189,"y":-680,"width":400,"height":400},
+		{"id":"5e875f3ff4c22abd","type":"file","file":"CCNA/The Network Layer.md","x":189,"y":-185,"width":400,"height":400},
+		{"id":"0612b27b63857e21","type":"file","file":"CCNA/The Physical Layer.md","x":189,"y":360,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"d8a80ff315cf94e8","fromNode":"c80ae8e02fc5a08c","fromSide":"right","toNode":"66e0238037dbd98f","toSide":"left"},
+		{"id":"e60b131826c3fe15","fromNode":"c80ae8e02fc5a08c","fromSide":"right","toNode":"5e875f3ff4c22abd","toSide":"left"},
+		{"id":"2479c50344277dee","fromNode":"c80ae8e02fc5a08c","fromSide":"right","toNode":"0612b27b63857e21","toSide":"left"}
+	]
+}

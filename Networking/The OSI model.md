@@ -89,7 +89,7 @@ IP addresses are essential for data routing and addressing in the network. There
 ## 6-Data link
 
 Takes each packet and converts it into a stream of bits, which are the basic units of data in a network. This layer also adds some information to each packet, like a header and a trailer, to help the devices on the network communicate with each other.
-Look at [[The access layer]]. 
+Look at [[The Access Layer]]. 
 
 ## 7-Physical
 
