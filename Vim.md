@@ -109,3 +109,9 @@ Examples:
 `:bp`: go to previous buffer  
 `:e#`: go to previous buffer (repeating it will toggle between two buffers only)  
 
+## Diagnostic
+
+These diagnostic key maps are created unconditionally when Nvim starts:
+`]d` jumps to the next diagnostic in the buffer.
+`[d` jumps to the previous diagnostic in the buffer.
+`<C-w>d` shows diagnostic at cursor in a floating window. 
