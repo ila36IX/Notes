@@ -1,4 +1,4 @@
-Let's use `esbuild` to compile `jsx` to `js`.
+Let's use `esbuild` to compile `jsx` to `js` as fun exercise!
 
  1. First you'll need a hyper function that will be called by `esbuild` and takes several parameters prototype: `createElement(name, props, ...children)` like react 
 
