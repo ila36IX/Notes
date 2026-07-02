@@ -90,4 +90,5 @@ class PolyType {
 
 Clearly, to implement polymorphism, the compiler must store some kind of type information in each object of class Employee and use it to call the right version of the virtual function print().
 In a typical implementation, the space taken is just enough to hold a pointer the usual implementation technique is for the compiler to convert the name of a virtual function into an index into a table of pointers to functions. That table is usually called the virtual function table or simply the vtbl. Each class with virtual functions has its own vtbl identifying its virtual functions.
-
+### bidirectional ownership cycle
+-- give this a definition later!

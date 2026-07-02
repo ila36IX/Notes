@@ -39,7 +39,7 @@ git reset --hard origin/branch-name
 ```
 ## Make branch match another branch
 
-This will reset main branch to be match exactly the exec branch
+This will reset main branch to match exactly the exec branch
 
 ```sh
 git checkout main
