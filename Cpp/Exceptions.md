@@ -64,6 +64,6 @@ Stack unwinding happens:
 - Normally, when a function returns.
 - During *exception* handling, when an exception is thrown and control transfers to a matching catch block.
 
-The process will be terminated if an exception have been thrown during stack unwinding.
+The process will be terminated if an exception have been thrown during stack unwinding (e.g. exception during the dtor).
 
 
